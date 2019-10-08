@@ -7,7 +7,7 @@
     <title>inputtags 예제</title>
 </head>
 <body>
-    <form action="">
+    <form>
     <!-- 타입은 ""와 '' 중 하나를 이용하여 작성 해도 되지만
     일반적으로 html에서는 ""를 이용해서 작성한다.
     "로 시작하면 "로 끝내고 , '로 시작하면 '로 끝내야지
@@ -50,7 +50,43 @@
     submit은 서버로 데이터를 전송하기 위한 버튼
     버튼은 단순한 버튼
     리셋은 같은 폼태그 안에 있는 모든 인풋 태그의 값들의 초기화 -->
-
+    <br>체크 박스 예제<br>
+    당신이 좋아하는 과일은? (다중 선택 가능) <br>
+    <input type="checkbox" name="fruit" value="apple"> 사과
+    <input type="checkbox" name="fruit" value="orange"> 오렌지
+    <br><br><br><br>색상 예제 <br>
+    <input type="color" name="color">
+    <br><br><br><br>시간 예제 <br>
+    <input type="month"> <br>
+    <input type="week"> <br>
+    <input type="date"><br>
+    <input type="daetime-local"><br>
+    <input type="time"><br>
+    <br><br><br><br>이메일 예제 <br>
+    <input type="email" name="email"><br>
+    <input type="file" name="file"><br>
+    <br><br><br><br>히든 예제:안보이지만 input 태그가 있습니다. <br>
+    <input type="hidden" name=" " value=123>
+    <br><br><br><br>이미지 예제 <br>
+    <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NaMZzObLNJp1jP4oio9_og4OTSXzz6wRzEM2g_ixnqP6fmvxmw" alt="그림없음">
+    <br><br><br><br>넘버 예제 <br>
+    <input type="number">
+    <br><br><br><br>비밀번호 예제<br>
+    <input type="password">
+    <br><br><br><br>라디오 예제 <br>
+    <input type="radio" name="gender" value="m" 남자 checkde id="male">
+    <label for="male">남자</label>
+    <input type="radio" name="gender" value="f" 여자 id="female">
+    <label for="female">여자</label>
+    <br><br><br><br>url 예제 <br>
+    <input type="url">
+    <!--검사하려는 문자열이 원하는 패턴인지 아닌지 확인하는 과정
+    기본 유효성 검사는 input 태그의 url 속성이나 email속성이 있다. 
+    기타 방법으로는 JQuery를 이용한 방법과 자바스크립트를 이용한 방법이 있다. -->
+    <br><br><br><br>Search 예제 <br>
+    <input type="search">
+    <br><br><br><br> Range 예제 <br>
+    <input type="range">
 </form>
 </body>
 </html>
