@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        a태그: 링크를 걸어주는 태그
+        href 속성 :클릭 했을 때 이동할 링크 주소
+        a태그는 기본적으로 밑줄이 그어져 있다. (ins가 있는 것처럼)
+        href 속성을 빈문자열로 두면 현재 페이지가 새로고침 된다. (href="")
+    -->
+    <p>a태그를 링크로 이용하는 예제</p>
+    <a href="http://www.naver.com">네이버</a> 기본: 현재 페이지가 직접 네이버로 변경 <br>
+    <a href="http://www.naver.com" target="_blank">네이버</a> target=_"blank": 새탭에 네이버를 열기 <br>
+    <!-- 
+        ./ : 현재 페이지가 속해 있는 현재 폴더를 의미 (절대주소)
+    -->
+    <a href="./exam1.html" target="_blank">예제1</a> : 현재 html 파일과 같은 폴더에 있는 exam1.html 열기 <br>
+
+    <!-- 
+        .. : 현재 페이지가 속해있는 파일의 상위 폴더 (상대주소)
+    -->
+    <!-- 
+        싱커 : a태그의 href 속성에 #아이디명을 입력하면 해당 아이디가 있는 위치로 이동 하는 것
+    -->
+
+    <a href="../day1/exam1.html" target="_blank">예제1</a>
+    <p>a태그를 싱커로 이용하는 방법 : 현재 페이지의 특정위치로 이동</p>
+    <a href="#h1">제목1로 이동</a> <br>
+    <a href="#h2">제목2로 이동</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 id="h1"> 제목1</h1>
+    <h2 id="h2"> 제목2</h2>
+    <br><br><br><br>
+    <a href="http://www.naver.com" target="_blank">
+    <input type="image" src="http://mblogthumb1.phinf.naver.net/MjAxNjExMTRfMTU5/MDAxNDc5MDU0MzQ3Nzc0.k5qrMi58qCX8bKBySrPL-Csr1SWbuhaBsszyuwLikEQg.JkPjwNkTZ4Tq7Ehywrc2AmWPOrqTmBnXLY-Wc047zc8g.JPEG.evahill/001.jpg?type=w2">
+    </a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</body>
+</html>
