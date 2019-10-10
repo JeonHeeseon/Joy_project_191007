@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>테이블 태그 예제</title>
+</head>
+<body>
+    <!-- 
+        테이블 태그는 테이블을 만드는 태그
+        최소 table, tr, th/td 가 있어야한다.
+        테이블 태그는 혼자 쓰이지 않는다
+        tr 행
+        th 칸
+
+        td 
+    -->
+  <table>
+      <tr>
+      <th>항목 1</th>    
+      <th>항목 2</th>
+  </tr>
+  <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+   </tr>
+  </table>
+<!-- 
+1. borther 속성 : 테두리를 생성하는 속성으로 굵기를 입력 (px) => css 에서 관리 할 수 있음
+2. caption 태그 : 테이블의 제목으로 테이블 가로 중앙을 기준으로 가운데 정렬을 해준다. 
+3. thead, tbody, tfoot 태그는 필수 요소는 아니지만 사용할 경우 편함
+=> thead, tbody, tfoot 순서가 바뀌어도 브라우저에서는 순서대로 보인다.
+4. scope 속성 : 제목에 대한 방향을 나타내줌
+5. figure 태그, figcapion 태그를 활용하여 테이블 설명을 작성할 수 있지만 
+caption 태그와 역할이 비슷해서 둘 중 하나 사용하면 됨
+6. colspan, rowspan 속성: 묶어야할 갯수가 와야함
+=> tbody는 tbody 내에서 묶음
+   colspan 은 '열' 들을 묶음 긴 가로가 생성
+   rowspan 은 '행' 들을 묶음 긴 세로가 생성
+-->
+
+<figure>
+    <figcaption>
+        1반 학생들 성적입니다.
+    </figcaption>
+    <table border="1">
+        <caption>우리반 성적</caption>
+        <thead>
+        <tr>
+            <th>이름</th>    
+            <th scope="col"> 국어</th>
+            <th scope="col">수학</th> <!--col 열-->
+            <th>비고</th>
+        </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>평균</th>
+                <th colspan="2">100</th>
+            </tr>
+        </tfoot>
+        <tbody>
+        <tr>
+            <th scope="row">전희선</td> <!--row 행-->
+            <td>99</td>
+            <td>100</td>
+            <td rowpan="2">없음</td>
+        
+        <tr>
+            <th scope="row">정수진</td> 
+            <td>99</td>
+            <td>100</td>
+             </tr>
+        </tbody>     
+        </table>
+    </figure>
+</body>
+</html>
