@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>테이블 태그 예제 (혼자 연습)</title>
+</head>
+<body>
+    <!--요금 테이블 예제
+    1. tr 이 5개 필요해
+    2. 젤 첫줄은 th 가운데 정렬을 위해서
+    3. -->
+    <table border="1"> 
+    <caption>요금</caption>
+    <thead>
+    <tr>
+      <th colspan="2">구분</th>
+      <th>입장료</th>
+      <th>자유이용권</th>
+    </tr>
+    </thead>
+    <tr>
+      <td rowspan="2">성인</td>
+      <td>개인</td>  
+      <td>8000</td>  
+      <td>10000</td>    
+    </tr>
+    <tr>
+      <td rowspan="2">학생</td> 
+      <td>개인</td>  
+      <td>4000</td>
+      <td>5000</td>       
+     </tr>
+     <tr>
+      <td>학생</td> 
+      <td>단체</td>  
+      <td>3500</td>  
+      <td>4500</td>    
+    </tr>
+    <tr>
+      <td>성인</td>
+      <td>단체</td>  
+      <td>7000</td>  
+      <td>9000</td>    
+  </tr>
+    </table>
+</body>
+</html>
