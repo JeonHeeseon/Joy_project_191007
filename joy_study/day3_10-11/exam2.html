@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>단위 확인 예제_브라우저를 표현할 수 있는 단위</title>
+<style>
+     /* 문서의 기본값을 설정 */
+
+    :root{
+     font-size: 14px;
+    }
+
+     /* px 해상도는 상대적인거지만 절대적인 느낌으로 사용하면 된다.*/
+
+   #hi1{
+    background-color:rosybrown;
+    width:400px;
+    }
+
+   /* %의 heigth 는 부모의 높이 기준으로 계산이 되기에 높이 계산 할 때 매우 조심해야함*/
+
+   #hi2{
+    background-color:rosybrown;
+    width:50%;
+    height: 1000%;
+    font-size: 84px;
+    }
+
+/* em 은 부모를 기준으로 배수를 의미 한다. 1.5em은 부모의 150% */
+
+  body{
+    font-size: 14;
+}
+
+  #hi3{ 
+    font-size: 2em;
+}
+
+  #span1{
+    font-size: 3em;    
+}
+
+/* rem 에서 r은 root를 의미하며
+root는 문서의 기본값을 의미 */
+
+body{
+    font-size: 3em;
+}
+
+  #hi4{ 
+    font-size: 2rem;
+}
+
+  #span2{
+    font-size: 3rem;    
+}
+
+/*
+브라우저의 보이는 화면의 height를 늘였다 줄였다 하는 것
+*/
+#hi5{
+  background-color: rosybrown;
+  height: 50vh;
+}
+
+</style>
+</head>
+<body> <!-- p태그의 부모는 body, body의 부모는 html -->
+    <p id="hi1">안녕하세요</p>  <!--같은 페이지라면 id가 중복 되면 안되지만 다른 페이지라면 가능-->
+    <p id="hi2">안녕하세요</p> 
+    <p id="hi3"><span id="span1">안녕하세요</span></p> 
+    <p id="hi4"><span id="span2">안녕하세요</span></p> 
+    <div id="hi5">안녕하세요</div> 
+</body>
+</html>
