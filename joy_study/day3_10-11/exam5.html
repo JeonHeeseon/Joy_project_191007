@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>가상 선택자</title>
+    <style>
+    /* 링크 가상 클래스: 링크를 다녀와서 색이 변하게 하는 등 변화 , 동적 가상 클래스 마우스를 갖다 댈때 */
+    a:link{
+        color: brown;
+    }
+    
+    a:visited{
+        color: aqua;        
+    }
+    /* hover와 focus가 자주쓰임 */
+    a:hover{
+        background-color: grey;
+    }
+
+    input:focus{
+        color: hotpink;
+    }
+    input:active{
+        background-color: khaki;
+    }
+    /* 
+    의사 요소 선택자
+    */
+    input:first-of-type{
+            background-color: lightgreen;
+    
+    /*nth 와 같다고 볼 수 있다. */
+        }
+    li:first-child{
+        color: lightskyblue;
+    }
+    
+    /* 2n-1 : 홀수
+    홀수번째 항목마다 css적용 */
+    li:nth-child(2n-1){
+        text-decoration: underline;
+    }
+    
+    h1::before{
+        content: "앞 : ";
+    }
+
+    h1::after{
+        content: " : 뒤";
+    }
+    /* 나중에 추가 설명 쌤께서 해주시기로 하심*/
+    .test::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <p>마우스를 대면 색이 변하고 input 안은 커서를 대면 효과가 있다</p>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://www.naver123.com">네이버</a>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <ul>
+        <li>사과</li>
+        <li>귤</li>
+        <li>포도</li>
+    </ul>
+    <h1>안녕은 영원한 헤어짐은 아니겠지요</h1>
+</body>
+</html>
