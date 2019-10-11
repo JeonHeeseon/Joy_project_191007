@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>선택자 조합_구체적으로 찾아가는 방법(자식,자손,후손)</title>
+    <style>
+    div{
+        color: salmon;
+    }
+
+    .hi{
+        background-color:pink;
+    }
+
+    /* body 태그 안에 있는 모든 p태그 (띄어쓰기로 표현 )
+       (자식, 손자, 증손자, 등 모든 후손)*/
+    body p{
+        font-weight: bold;
+    }
+
+    /* body 태그 바로 안에 있는 p태그 (꺽쇠 > 는 자식만 가능) */
+    body>p{
+        text-decoration: underline;
+    }
+
+    /* 인접 형제 선택자
+    +는 형제는 인접(붙어있는) 의미하며, 앞형제가 div 태그 이면서 본인이 div태그인 경우 (class, id가 올 수 도 있다. 
+    */
+    div+div{
+        border-top: 1px solid seagreen;
+    }
+
+ /* 형제 선택자
+        앞 형제가 div1클래스를 가지고 있으면서 본인이 p태그인 경우
+    */
+    .div~p, /* 콤마는 그룹화를 의미하며 A,B{}에서 A인경우와 B인 경우 모두 같은 스타일을 적용할 때 사용*/
+    .hi{
+        border-bottom: 1px solid red;
+    }
+
+    /* 본인을 구체적으로 강하게 나타내는 방법 
+    :붙여서 여러선택자들을 사용한다.
+    태그 선택자들을 연달아 쓸 수 없다.
+    (예) pdiv{}
+    아이디 선택자들을 연달아 쓸 수 없다. 
+    (예) #id#pw{} 하나의 태그에는 아이디가 하나 있어야 한다.
+
+    가능한 상황
+    .클래스.클래스{}
+    태그.클래스{} // 거꾸로 쓰면 의미가 달라짐.
+    태그#아이디{} // 거꾸로는 안됨
+    #아이디.클래스 //거꾸로 가능
+    div.hi{} (o)
+    .hidiv{} (O)
+      => hi클래스이면서 div태그가 아닌 hidiv 클래스로 인식
+    */
+
+    .hi.first{
+        border-left: 4px blueviolet solid;
+    }
+    </style>
+</head>
+<body>
+
+    <!--
+    id : 중복 불가
+    name : 중복 가능, 하나만 입력
+    class : 중복 가능, 여러개 가능 (띄어쓰기로 구분)
+    -->
+
+    <div class="div1">
+       <div class="hi first">안녕</div>
+    </div>
+
+    <div>
+        <div class="hi second">안녕하세요</div>
+    </div>
+    
+    <div class="hello"><p>안녕2</p></div>
+
+    <p class="hi">안녕3 </p>
+</body>
+</html>
