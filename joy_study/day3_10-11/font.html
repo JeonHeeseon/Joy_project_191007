@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서체(font)와 글(text)</title>
+    <!-- 링크는 html 파일에 css를 가져오는 방법 -->
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <style>
+    /* 위에 있는 링크 태그와 같은 역할을 아래 @import 가 해준다.
+    css파일을 css에 가져오는 방법 */
+    @import url("https://fonts.googleapis.com/css?family=Sunflower:300&display=swap");
+    /* @import url(교재 165쪽에 있는 연결코드에 있는 url 주소를 입력); */
+    /* font-family : 폰트 종류 설정 */
+    body{
+        font-family: 'Sunflower', sans-serif;
+        font-size: 32px;
+    
+    /* font-weight:는 100-900까지의 값을 가짐
+    숫자가 클수록 두꺼워짐
+    700은 bold로 지정 */
+        font-weight: 700; /*또는 bold 라고 하면 됨 */
+    
+    /* 텍스트 데크는 170쪽 표 참고
+    underline, overline, none, line-through  */
+        text-decoration: underline;
+    
+    /* style은 글자 기울기: none, italicm oblique*/
+        font-style: oblique;
+        color: plum;
+    
+    /* 글의 정렬 방법
+    text-align : center, right, left, justify */
+        text-align: left;
+    
+    /* 중앙에서 부터 500px 들어가서 가운데 정렬 */ 
+        width: 1000px;
+    /* 글자 사이의 간격*/
+        letter-spacing: 3px;
+    /* 단어 사이의 간격*/
+        word-spacing: px;
+    /* 글자가 들어가는 위 아래의 빈박스의 높이 조절 (수직 가운데 정렬 할 때 */
+        line-height: 50px;
+    /* 글자의 들여쓰기 (글자 정렬을 left로 주고 설정) */
+        text-indent: 1px;
+    /* 영문의 대/소문자 
+        단어의 첫 글자를 대문자로 넣도록 */
+        text-transform: capitalize;
+    }
+</style>
+</head>
+<body>
+    <br>
+    안녕하세요. 제 이름은 가을 입니다.
+    <br>
+    <br>
+    가을이 왔네요.
+    autumn is here.
+    <br>
+    <br>
+    가을이
+    <br>
+    좋아요.
+    <br>
+</body>
+</html>
