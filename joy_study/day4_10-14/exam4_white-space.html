@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>white-space</title>
+    <style>
+        #p1{
+            white-space: nowrap;
+        }
+
+        #p2{
+            white-space: pre;
+        }
+
+        #p3{
+            white-space: pre-wrap;
+        }
+
+        #p4{
+            white-space: pre-line;
+        }
+
+        /* pre태그 다음에 나오는 형제 p태그들*/
+        pre~p{
+            width: 100px; 
+            /* 넘어가는 자식 요소들을 안보이게 감춤 */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<!-- pre태그 : 태그 안에 입력한 코드를 그대로 보여줌 -->
+<body>
+    <pre>안녕하세요    
+         안녕하세요   
+         안녕하세요
+        </pre>
+
+    <h2>nowrap</h2>
+       <p id="p1">
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+    </p>
+
+    <h2>pre</h2>
+    <p id="p2">
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+    </p>
+
+    <h2>white-space-pre-wrap</h2>
+    <p id="p3">
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+    </p>
+
+    <h2>white-space-pre-line</h2>
+    <p id="p4">
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+       가을이 왔어요.
+     </p>
+</body>
+</html>
