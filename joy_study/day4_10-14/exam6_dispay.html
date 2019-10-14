@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>디스플레이 속성</title>
+    <style>
+        /* 기본 */
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .inline{
+        /* inline은 가로와 높이, 여백의 길이를 지정할 수 없다.
+        새 라인에서 시작되는 것이 아니라 현재 라인에서 이어서 작업한다.
+        단, 앞에 형제 태그가 block태그이면 새 라인에서 시작  */
+            display: inline;
+        }
+
+        .inline-block{
+        /* block의 특성인 가로, 높이, 여백의 길이를 지정할 수 있는 특성과
+        inline의 현재 위치에서 이어서 작업하는 특성이 같이 있는 속성값 */
+            display: inline-block;
+        }
+
+        .block{
+        /* block은 가로,세로,여백의 길이를 지정할 수 있고,
+        새 라인에서 시작하게 한다. */
+            display: block;
+        }
+        /* 안보이게 해주는 값:none => 투명한게 아님, =>공간을 차지 하지 않음 (아예없애버리는것) */
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>기본</div>
+    <div class="inline-block">inline-block</div><!--공백은 엔터에 의해 생긴다. 붙여서 적어야함--><div class="inline">inline</div>
+    <div class="block">block</div>
+    <div class="none">none</div>
+    </body>
+</html>
