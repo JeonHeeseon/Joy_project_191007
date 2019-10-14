@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>텍스트 줄바꿈</title>
+<style>
+    p{
+        text-align: justify;
+    }
+
+    #second{
+        word-break: break-all;
+    }
+    /* word-break: 라인을 넘어가서 줄을 바꿀때 단어를 깨서 다음 라이으로 할 것인지 (break-all)
+    아니면 단어를 깨지 않고 다음라인으로 넘어갈 것인지 (기본)을 설정 */
+</style>
+
+</head>
+<body>
+    <!-- 단어가 깨지지 않고 이어지도록 만들어주는 text-align: justify -->
+        <p id="first">
+        1. Where there is a will there is a way.
+        2. Think of the end before you begin.
+        3. Carpe Diem!(Seize the day!)
+        4. "boys, be ambitious!!"
+        </p>
+         
+     <!-- 단어가 깨지더라도 다음라인에 표시하도록 하는 word-break:break-all -->
+        <p id="second">
+        5. Raise your head!
+        6. Try hard, Try hard!
+        7. Ability is decided by one's own effort.
+        8. Faithfulness makes all things possible.
+        9. Do to others as you would be done by. 10. Faith without deeds is useless.
+        </p>   
+         
+        
+         
+        
+         
+</body>
+</html>
