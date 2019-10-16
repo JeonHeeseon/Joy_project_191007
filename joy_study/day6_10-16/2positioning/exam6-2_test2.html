@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>중간 두 개 크게 하나 만들기 예제 (큰박스가 600이 되도록-box-sizing)</title>
+    <style>
+    .parent{
+        width: 600px;
+        height: 300px;
+        border: 5px solid red;
+        padding: 30px;   
+        box-sizing: border-box; 
+    }
+    .child{
+        width: 48%;
+        height: 100%;
+        border: 5px solid seagreen;
+        box-sizing: border-box;
+        
+    }
+    
+    #left{
+        float:left;
+    }
+    #right{
+        float: right;;
+    }
+ </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child" id="left"></div>
+        <div class="child" id=right></div>
+</div>
+</div>
+</body>
+</html>
