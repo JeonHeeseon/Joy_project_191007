@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>테이블 관련 속성 auto</title>
+    <style>
+        table{
+            /* table-layout은 테이블 태그의 가로(width)가 지정이 되어있어야
+            fixed가 적용이 된다. */
+            table-layout: auto;
+            border-collapse: collapse;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr> <!--한 행을 의미-->
+            <td>제목1</td>
+            <td>제목2</td>
+        </tr>
+        <tr>
+             <td>코드를 배워요.</td>
+             <td>재미도 따라옵니다.</td>
+           
+        </tr>
+    </table>
+</body>
+</html>
