@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>부모를 기준으로 반을 나눠서 컨텐츠 박스 두 개 만들기 예제</title>
+    <style>
+    .parent{
+        width: 600px;
+        height: 300px;
+        border: 2px solid red;
+    }
+    .child{
+        width: 50%;
+        height: 100%;
+        border: 2px solid seagreen;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div><div class="child"></div> <!-- div 와 div 사이에 공백을 없애기 위해서 붙여줘라 아니면 float을 사용해라-->
+</div>
+</body>
+</html>
