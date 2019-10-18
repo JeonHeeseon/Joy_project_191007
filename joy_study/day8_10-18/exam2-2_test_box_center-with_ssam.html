@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>박스 중앙으로 보내서 커서시 박스 크기 커지게_예제</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow ;
+            border: 5px solid magenta;
+            top: 50vh; /* 퍼센트 이긴 하지만 브라우저의 가로의 와 높이를 따진다 vw: 브라우저의 가로, vh:브라우저의 세로 */
+            left: 50vw;
+            position: absolute;
+            margin: -100px 0 0 -100px; 
+            box-sizing: border-box;
+        }
+
+        .box:hover{
+            width: 300px;
+            height: 300px;
+            border: 20px double lightblue;
+            background-color: rgb(255, 143, 143);
+            margin: -150px 0 0 -150px;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+        }
+        button:hover{
+            width: 100px;
+            height: 40px;
+            position: relative; /* 만약 '기본 내 위치'를 기준으로 키우고 싶으면 */
+            top: -5px;
+            left: -5px;
+        }
+    </style>
+</head>
+<body>
+    <button>BUTTON</button>
+    <div class="box"></div>
+</body>
+</html>
