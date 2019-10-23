@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            animation-name: scale ;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            position: absolute;
+            }
+        @keyframes scale{
+            0%{ 
+                width: 200px;
+                height: 200px;
+                }
+            50%{}
+            100%{
+                width: 200px;
+                height: 200px;
+                }
+        }
+    </style>
+<body>
+    <div class="box"></div>
+</body>
+</html>
