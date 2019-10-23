@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원가입 복습예제</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+       .container{
+           width: 800px;
+           position: absolute; /* 가운데 정렬 하는 방법 margin: 0 auto 로도 가능*/ 
+           left: 50%;
+           margin-left: -400px;
+           /* 또는 중앙 정렬 법  
+           margin: 50px auto;
+           */
+           margin-top: 50px;
+           box-sizing: border-box;
+           border: 4px solid rgb(143, 212, 210);
+          
+       }
+       .container>h1{
+           text-align: center;
+           color: darkgray;
+           font-size: 30px;
+       }
+        .box-left{
+            width: 30%;
+            float: left;
+            padding-left: 50px;
+        }
+        .box-right{
+            width: 70%;
+            float: left;
+        }
+        .box::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .box-phone input[type=number]{
+            width: 150px;
+        }
+        .box-submit{
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" method="GET" action="test"> <!-- action 은 어디에 연결할 것인지 ...-->
+      <h1>회원가입</h1>
+        <div class="box box-id">
+            <div class="box-left">아이디</div>
+            <div class="box-right"><input type="text" name="id" autofocus></div>
+        </div>
+        <div class="box box-pw">
+            <div class="box-left">비밀번호</div>
+            <div class="box-right"><input type="password" name="pw"></div>
+        </div>
+        <div class="box box-pw2">
+            <div class="box-left">비밀번호 확인</div>
+            <div class="box-right"><input type="password" name="pw2"></div>
+        </div>
+        <div class="box box-email">
+            <div class="box-left">이메일</div>
+            <div class="box-right"><input type="email" name="email"></div>
+        </div>
+        <div class="box box-gender">
+            <div class="box-left">성별</div>
+            <div class="box-right">
+                <input type="radio" name="gender" value="남자" id="male" checked>
+                <label for="male">남자</label>
+                <input type="radio" name="gender" value="여자" id="female">
+                <label for="male">여자</label>
+            </div>
+        <div class="box box-phone">
+                <div class="box-left">전화번호</div>
+                <div class="box-right">
+                <input type="number" name="phone1"> -
+                <input type="number" name="phone2"> -
+                <input type="number" name="phone3">
+            </div>
+         </div>
+    </div>
+    <div class="box box-submit">
+    <button>회원가입</button>
+    </div>
+    </form>
+</body>
+</html>
