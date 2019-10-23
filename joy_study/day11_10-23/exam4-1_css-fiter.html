@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>필터 예제 309쪽 ~ </title>
+    <style>
+        /* 
+        
+        모든 브라우저에서 적용이 가능해서
+        opacity 가 적용이 안 된 다른 속성이 있다면 
+        filter로 적용해주면 된다. 
+        쌤의 정리
+        filter : 앞에 배운 opacity, box-shadow 와 같은 속성들이 브라우저별 또는 버전별로
+        적용이 안 될 때 filter를 사용하면 됨
+         */
+        .blur img{
+            /*
+            blur : 값은 px로 지정하며, px 값이 높아질 수록 많이 흐려짐 
+             */
+            filter: blur(2px);
+        }
+        .brightness{
+            filter: brightness(50%); /*  100% 는 원본과 같고 %가 낮을 수록 어두워지며 100%가 넘으면 이미지가 밝아짐 */ 
+        }
+        .contrast{
+            filter: contrast(10%); /* 대비 대조 속성으로 100% 원본, %가 낮을 수록 색과 색의 구별이 낮아진다.*/
+        }
+    </style>
+</head>
+<body>
+    원본 
+    <p class="origin"><img src="../day2/cat.png" alt=""></p>
+    <hr>
+    1. 블러 필터 효과
+    <p class="blur"><img src="../day2/cat.png" alt=""></p>
+    <hr>
+    2. 명도 필터 효과 : %가 낮을 수록 어두워지며 100%가 넘으면 이미지가 밝아짐
+    <p class="brightness"><img src="../day2/cat.png" alt=""></p>
+    <hr>
+    3. 대비 (색과 색 사이의 구분의 차이) 필터 효과 : 수치가 낮을 수록 색상 구분이 명확하지 않음
+    <p class="contrast"><img src="../day2/cat.png" alt=""></p>
+    <hr>
+
+</body>
+</html>
