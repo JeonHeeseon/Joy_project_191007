@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 간단한 예제</title>
+    <script src="https://kit.fontawesome.com/dfdbe46ef1.js" crossorigin="anonymous"></script> 
+    <!-- 반응형은 사이즈가 다르게 할 때마다 화면에 변화를 주는 것-->
+    <style>
+        .nav{
+            height: 50px;
+            background-color:darkseagreen;
+        }
+        .pc>div{
+            height: 100%;
+            float: left;
+            font-size: 25px;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+        .mobile{
+            display: none;
+        }
+        @media screen and (max-width: 720px){ /* 화면이 720 px 이상일 때는 잘 보이다가 720px 이하 일때는 사라짐*/
+            .pc{
+                display: none;
+            }
+            .mobile{
+                display: block; /* 줄어들면 햄버거 아이콘이 보임*/
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                line-height: 50px;
+                text-align: center;
+                float: right;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+        .mobile:hover{
+            cursor: pointer;
+            border: 1px solid thistle;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="pc">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+     </div>
+    <div class="mobile">
+        <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</body>
+</html>
