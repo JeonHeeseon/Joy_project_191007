@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 예제_교재 431쪽~</title>
+    <style>
+        
+        /* @media를 쓰지 않는 화면은 1200px*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        .box{
+            width: calc(100% / 5) ;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+        }
+         /* 장치의 가로 화면을 기준으로  반응형을 적용 */
+         /* 980px 이상 1200px 미만을 관리하기 위해 최대 max-width를 1200px로 설정*/
+        @media screen and (max-width: 1199px){
+            .box{
+                width: calc(100% / 4);
+                border-color: rgb(223, 81, 81);
+                }
+            } 
+            /* 
+            768px 이상 980px 미만을 관리하기 위해 max-width를 980px로 설정
+             */
+        @media screen and (max-width:979px) {
+            .box{
+                width: calc(100% / 3);
+                border-color: rgb(40, 202, 252);
+                }
+            } 
+            /* 
+            481px 이상 768px 미만을 관리하기 위해 max-width를 768px로 설정
+             */
+        @media screen and (max-width:767px) {
+            .box{
+                width: calc(100% / 2);
+                border-color: rgb(40, 252, 58);
+                }
+            } 
+            /* 
+            480px이하를 관리하기 위해 max-width를 481px로 설정
+             */
+        @media screen and (max-width:480px) {
+            .box{
+                width: calc(100% / 1);
+                border-color: rgb(241, 229, 58);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>
