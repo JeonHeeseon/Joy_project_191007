@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>레이아웃 예제_교재 435쪽</title>
+    <style>
+        .container1{
+            background-color: rosybrown;
+            padding: 10px;
+        }
+        .container1 .nav{
+            width: 1000px;
+            height: 50px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        
+        @media screen and (max-width: 1099px){
+            .nav{
+                width:700;
+
+            }
+        }
+        @media screen and (max-width: 719px){
+            .nav{
+                width:300;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="nav"></div>
+    </div>
+</body>
+</html>
