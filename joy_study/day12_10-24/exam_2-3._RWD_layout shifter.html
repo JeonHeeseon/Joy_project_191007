@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>레이아웃 예제2_교재 443쪽</title>
+    <style>
+        /* 이 예제는 순서가 중요하다. 원하는 작동이 안될 수 있음 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container1,.container4, .container2, .container3{
+            background-color: rosybrown;
+            padding: 10px;
+        }
+        .container1 .nav{
+            width: 1000px;
+            height: 50px;
+            background-color: rgb(255, 255, 241);
+            margin: 0 auto;
+        }
+        .container4 .nav{
+            /* Tiny Tweaks : 쉽긴 하지만 글이 화면이 작아지면 짜부 됨  */
+            width: 100%;
+            height: 100px;
+            background-color: rgb(224, 253, 60);
+        }
+        .container2 .box1{
+            width: 30%;
+            height: 50px;
+            float: left;
+            background-color: salmon;
+        }
+        .container2 .box2{
+            width: 50%;
+            height: 50px;
+            float: left;
+            background-color: skyblue;
+        }
+        .container2 .box3{
+            width: 20%;
+            height: 50px;
+            float: left;
+            background-color: teal;
+        }
+        .clear::after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        .container3 .box1{
+            height: 50px;
+            width: 80%;
+            float: right;
+        }
+        .container3 .box2{
+            height: 100px;
+            width: 20%;
+            float: left;
+        }
+        .container3 .box3{
+            height: 50px;
+            width: 80%;
+            float: right;
+        }
+        .container3 .box1{
+            height: 50px;
+            width: 80%;
+            float: right;
+            background-color: violet;
+        }
+        .container3 .box2{
+            height: 100px;
+            width: 20%;
+            float: left;
+            background-color: turquoise;
+        }
+        .container3 .box3{
+            height: 50px;
+            width: 80%;
+            float: right;
+            background-color: rgb(173, 118, 245);
+        }
+    
+        @media screen and (max-width: 1099px){
+            .container1 .nav{
+                width:300px;
+            }
+            .container2 .box1{
+                width:40%;
+            }
+            .container2 .box2{
+                width:60%;
+            }
+            .container2 .box3{
+                width:100%;
+            }
+        }
+        @media screen and (max-width: 719px){
+            .container1 .nav{
+                width:300px;
+            }
+            .container2 .box1,            
+            .container2 .box2,
+            .container2 .box3{
+                width:100%;
+            }
+            .container3 .box1,
+            .container3 .box2,
+            .container3 .box3{
+            height: 50px;
+            width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="nav"></div>
+    </div>
+    <div class="container4">
+            <div class="nav"></div>
+        </div>
+    <div class="container2 clear">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+    </div>
+    <div class="container3 clear">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>        
+    </div>
+    
+</body>
+</html>
