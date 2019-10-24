@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 예제2_쌤과(서브메뉴 삽입)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      .nav{
+          background-color: darkseagreen;
+      }
+      .nav li{
+          color: wheat;
+          list-style: none;
+          float: left;
+          padding: 0 10px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 20px;
+      }
+      .clear::after{
+          clear: both;
+          content: "";
+          display: block;
+      }
+      @media screen and (max-width: 1079px) and (min-width: 701px){
+          .nav{
+              float: left;
+              width: 200px;
+              
+          }
+          .nav li{
+              width: 200px;
+              border: 2px solid rgb(90, 156, 105);
+              border-bottom: none;
+              
+          }
+          .nav li:last-child{
+              border-bottom:2px solid rgb(90, 156,105);
+          }
+      }
+
+      @media screen and (max-width: 700px) {
+          .nav ul{
+              float: right;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="nav clear">
+        <ul class="clear"> <!--기본 블락태그-->
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+    </div>
+</body>
+</html>
