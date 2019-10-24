@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>레이아웃 예제2_교재 448쪽(추가 Tiny Twaks)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container1,.container4{
+            background-color: rosybrown;
+            padding: 10px;
+        }
+        .container1 .nav{
+            width: 1000px;
+            height: 50px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        .container4 .nav{
+            /* Tiny Tweaks : 쉽긴 하지만 글이 화면이 작아지면 짜부 됨  */
+            width: 100%;
+            height: 100px;
+            background-color: rgb(224, 253, 60);
+        }
+        
+        
+        @media screen and (max-width: 1099px){
+            .nav{
+                width:700;
+            }
+        }
+        @media screen and (max-width: 719px){
+            .nav{
+                width:300;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="nav"></div>
+    </div>
+    <div class="container4">
+            <div class="nav"></div>
+        </div>
+    
+</body>
+</html>
