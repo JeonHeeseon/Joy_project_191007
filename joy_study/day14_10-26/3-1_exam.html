@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>박스 예제_1</title>
+    <style>
+    *{
+        /* body 태그에는 기본적으로 마진과 패딩이 들어있다. */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    /* 가로의 길이가 기본적으로 content 이기 때문에 box-sizing이 필요 */
+    }
+    .p{
+        height: 100vh;
+        border: 5px solid rgb(227, 253, 176);
+    }
+    .box1{
+        border: 5px solid rgb(250, 164, 164);
+        height: 100%; /* 가로와 세로의 길이가 %인 경우 부모 콘텐츠의 가로와 세로의 %*/
+        width: 50%;
+        float: left;
+    }
+    .box2{
+        border: 5px solid rgb(2, 179, 179);
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
+</style>
+</head>
+<body>
+    <div class="p">
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+</body>
+</html>
