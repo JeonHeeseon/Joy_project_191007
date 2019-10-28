@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>박스예제_2</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .nav{
+        height: 70px;
+        border: 3px solid lightseagreen;
+    }
+    .container{
+        margin-top: 10px;
+        height: calc(100vh - 50px - 10px);
+    }
+    .menu{
+        height: 100%;
+        border: 3px solid salmon;
+        width: 200px;
+    }
+    .contents{
+        height: 100%;
+        border: 3px solid rgb(187, 187, 46);
+        width: calc(100% - 200px - 10px);
+    }
+    .flot-left{
+        float: left;
+    }
+    .flot-right{
+        float: right;
+    }
+</style>
+</head>
+<body>
+    <nav class="nav"></nav>
+    <div class="container">
+        <div class="menu flot-left"></div>
+        <div class="contents flot-right"></div>
+    </div>
+</body>
+</html>
