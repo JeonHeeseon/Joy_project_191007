@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 예제</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .p{
+        width: 100vw;
+        height: 100vh;
+       
+    }
+    .main{
+        border: 5px solid red;
+        height: 100%;
+        width: 100%;
+    }
+    @media screen and (max-width:1000px)
+    {
+        .main { height: 100%;}
+        .main {width: 100%;}
+    }
+    @media screen and (min-width:999px){
+        .main {height: 50% - 2;
+        }
+        .main {
+               width: 50%;
+        }
+        .main { margin: 0 auto;}
+    }
+</style>
+</head>
+<body>
+    <div class="p">
+        <div class="main"></div>
+    </div>
+   
+</body>
+</html>
