@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>오버플로우 예제</title>
+    <style>
+        .parent{
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            /* overflow 속성은 자식이 부모를 벗어나는 크기를 가질 때 처리하는 속성
+            hidden : 넘어가는 내용들을 가린다.
+            auto : 내용이 넘어가면 스크롤 생성, 넘어가지 않으면 스크롤 생성 하지 않음
+            scroll : 부조건 스크롤을 생성한다.
+            visible : 자식의 넘어가는 내용이 보이도록 한다.
+            */
+            overflow: auto;
+        }
+        .child{
+            width: 400px;
+            border: 1px solid sienna;
+        }
+        .box{
+            width: 400px;
+            border: 1px solid blue;
+            /*overflow 속성을 이용한 말줄임 (...) 표시 적용하는 방법 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        걸리버 여행기 GULLIVER’S TRAVELS (영어 원서 읽기) 
+        《걸리버 여행기》
+        (The Gulliver's Travels)는 
+        영국의 작가 조너선 스위프트의 1726년작 풍자 소설이다. 당시 시대의 상황을 풍자한 소설로, 오랜 시간에 걸쳐 많은 나라에서 동화로 각색되어 아이들을 위해 많이 읽혔다. 주로 동화에서는 3부까지의 여행을 수록하였으며, 4부는 신성 모독 등을 이유로 들어 삭제해왔다. 많은 사람들에게는 1부인 작은 사람들의 나라인 릴리퍼트기행을 걸리버 여행기의 전체 내용인 것처럼 알려져왔다. 소설의 내용을 모델로 각색하여 만들어진 영화 걸리버 여행기가 개봉하였다. 대한민국에서 걸리버 여행기는 1890년대 초 윤치호(尹致昊)에 의해 처음으로 번역되어 소개되었다. 그 뒤 2000년 문학수첩에서 문학평론가 신현철이 동화로 각색된 것을 원본 그대로 무삭제 완역판을 처음으로 출간하였다. 무삭제판은 원본을 그대로 번역하여, 동화와 다른 당시 시대를 풍자한 모습을 제대로 느낄 수 있다는 평을 받는다. 선장 걸리버로부터의 편지 제1부 작은 사람들의 나라 -       
+    </div>
+    <div class="box">
+            걸리버 여행기 GULLIVER’S TRAVELS (영어 원서 읽기) 
+            《걸리버 여행기》
+            (The Gulliver's Travels)는 
+            영국의 작가 조너선 스위프트의 1726년작 풍자 걸리버 여행기 GULLIVER’S TRAVELS (영어 원서 읽기) 
+            《걸리버 여행기》
+            (The Gulliver's Travels)는 
+            영국의 작가 조너선 스위프트의 1726년작 풍자
+    </div>
+</body>
+</html>
