@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인 화면</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 50px;
+            width: 600px;
+            border: 4px solid sienna;
+            padding: 20px;
+        }
+        .box{
+            height: 100px;
+            width: 100%;
+            font-size: 20px;
+            color: brown;    
+            font-weight: bold;       
+        }
+        .container>.id{
+            margin-bottom: 20px;
+        }
+        .container>.pw{
+            margin-bottom: 20px;
+        }
+        
+        @media screen and (min-width:561px){
+            .container{
+            height: calc(100vh - 100px);
+            width: calc(100% / 2);
+            border: 4px solid sienna;
+            margin-top: 50%;
+            margin-left: 50%;
+            margin: 50px auto;
+           }
+            .box{
+            height: 50px;
+            width: 100%;
+         }
+        }
+        @media screen and (max-width:559px){
+            .container{
+            height: 100vh;
+            width: calc(100% / 2);
+            border: 4px solid sienna;
+            margin: 0 auto;
+           }
+            .box{
+            height: 50px;
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <input class="id box" placeholder="아이디">
+      <input class="pw box" placeholder="패스워드">
+      <button class="login box">로그인</button>
+  </div>  
+</body>
+</html>
