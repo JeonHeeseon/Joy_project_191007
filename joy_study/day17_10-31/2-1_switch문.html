@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch문</title>
+모든 조건문은 if 문이 가능하다.
+<hr>
+하지만 switch 문을 사용하면 좀 더 깔끔한 표현이 가능.
+<script>
+    /*
+    switch문문법
+    switch(변수 또는 식){
+        case 값1: //if(변수 == 값1)
+           실행문1;
+           break;   // break 있어야지 switch 문을 빠져나온다. 
+         case 값2: //else if(변수 == 값2)
+           실행문2;
+           break; 
+        default: //else
+            실행문3;
+    }
+    break : switch 문을 빠져 나오는 역할
+    switch 문에서 case 와 일치하는 값이 있으면 해당하는
+    실행문을 실행하고 break를 찾는다. 있으면 swicth 문을
+    빠져나오고, 없으면,  다음 case 의 실행문으로 가서 해당 실행문을
+    실행하고 break를 찾는다. 그래서 break를 만날 때 까지 위 과정을 반복한다.
+    상황에 따라 break문을 사용하지 않는 경우도 있다.
+    */
+
+    // 홀짝 판별 예제 
+    var num = 3;
+    switch(num % 2){
+        case 0:
+        console.log('',num,'은 짝수')
+        break;
+        case 1:
+        console.log('',num,'은 홀수')
+        break;
+    }
+    var month = 1;
+    switch(month){
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        console.log('', month,'월은 31일 까지 있습니다.')
+        break;
+        case 4: case 6: case 9: case 11:
+        console.log('', month,'월은 30일 까지 있습니다.')
+        break;
+        case 2: 
+        console.log('', month,'월은 28일 까지 있습니다.')
+        break;
+        default:
+        console.log('', month,'월은 없는 달입니다.')
+    }
+    /* 
+    1. 식의 값이 제한적일 때 : % 연산자 이용
+        -홀짝 예제
+    2. 사용하는 변수의 값이 제한적일 떄
+        -달 마지막일 출력 예제, 산술 연산 예제
+    */
+
+    /* if 문으로 작성한 산술 연산 예제를 이용하여 switch 문으로 작성해보세요.*/
+    // 문제 :
+     /*
+
+if(op 가 '+'이다){
+    num1 + num2 출력;
+    }
+
+=> if(op == '+'){
+console.log('', num1, op, num2, '=', num1+num2);
+}
+else if(op == '-'){
+console.log('', num1, op, num2, '=', num1+num2);
+}
+if(op == '*'){
+console.log('', num1, op, num2, '=', num1+num2);
+}
+if(op == '/'){
+console.log('', num1, op, num2, '=', num1+num2);
+}
+if(op == '%'){
+console.log('', num1, op, num2, '=', num1+num2);
+}
+else{ 
+console.log(op, '는 잘 못된 연산자 입니다.')
+}
+*/
+
+    var num1 = 10, num2 = 20;
+    var op = '?';
+    switch(op){
+        case '+':
+        console.log('', num1, op, num2, '=', num1+num2);
+        break;
+        case '-':
+        console.log('', num1, op, num2, '=', num1-num2);
+        break;
+        case '*':
+        console.log('', num1, op, num2, '=', num1*num2);
+        break;
+        case '/':
+        console.log('', num1, op, num2, '=', num1/num2);
+        break;
+        case '%':
+        console.log('', num1, op, num2, '=', num1%num2);
+        break;
+        default:
+        console.log('는 잘 못 된 연산자 입니다.');
+    }
+// case에는 변수가 오면 안된다. 상수만 와야한다.
+1,1.23 , 'abcd'
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
