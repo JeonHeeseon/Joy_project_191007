@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 숨기기 펼치기</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- slide 는 높이가 늘어나면서 나타나기 때문에 밑에 있는
+    컨텐츠가 천천히 밀린다.
+    fade는 높이가 갑자기 생기기 때문에 밑에 있는 컨텐츠가 확밀린다. -->
+    <script>
+        $(document).ready(function(){
+            $('#hide').click(function(){
+                $('.box').hide();
+            }) //box hide 이벤트 종료 
+            $('#more').click(function(){
+                $('.box').show();
+            })//show  이벤트 종료 
+            $('#moreShow').click(function(){
+                $('.box').toggle();
+            }) //toggle 이벤트 종료
+            $('#cancle').click(function(){
+                $('.box').toggle();
+            })
+        }) // hide 클릭 이벤트 종료
+    </script>
+    <style>
+        .btn{
+            width: 50px;
+            height: 20px;
+            border: 1px solid steelblue;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .box{
+            height: 100px;
+            background-color:cornsilk;
+        }
+        .box>.cancle{
+            margin-top: 5px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            color: steelblue;
+            
+            float: right;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn" id="hide">감추기</div>
+    <div class="btn" id="more">더보기</div>
+    <div class="btn" id="moreShow">토글</div>
+    <div class="box">
+        <div class="cancle" id="cancle">X</div>
+    </div>
+</body>
+</html>
