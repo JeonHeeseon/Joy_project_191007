@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery 애니메이션</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           /*
+            $(selector).animate({params},speed,callback);
+            매개변수
+            -params : 애니메이션 속성, 최종적으로 바뀌어야할 속성
+            -speed : 애니메이션 동작 시간
+            -callback : 애니메이션 동작 후 작업
+            animate를 이용하여 애니메이션을 적용하는 경우, 
+            해당 속성들이 요소의 style속성이 추가 된다.
+            animate 함수들은 호출 순서가 다르다.
+            animate 함수가 끝난 다음에 실행하고 싶은 코드는
+            callback 함수에 넣어야 한다.
+            */
+            $('#power').click(function(){
+                $('.move').animate({right:'0'},500)
+                $('.move').animate({bottom:'0'},1000)
+                $('.move').animate({left:'0'},500)
+                $('.move').animate({top:'0'},1000,function(){
+                    // animate에 의해 추가된 style 속성을 초기화 하는 작업
+                    $('.move').prop('style','');
+                    // 시작 버튼을 클릭 해라
+                    $('#power').click();
+                });//무한 돌기 이벤트 종료
+                // alert('Hello')
+            }) //power 클릭 이벤트 종료
+        });
+    </script>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid thistle;
+            position: absolute;
+            border-radius: 100px;
+        }
+        button{
+            background-color: rgb(193, 179, 245);
+        }
+        #power{
+            left: 50%;
+            top: 50%;
+            margin-top: -52px;
+            margin-left: -52px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box move"></div>
+    <button class="box" id="power">START</button>
+    
+</body>
+</html>
