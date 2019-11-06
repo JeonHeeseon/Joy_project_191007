@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Pagination - Active State</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<!-- 새로운 개념이 등장해 ~ 
+    1. 내가 클릭한 것의 색이 변하도록 하고,
+    2. 기존의 클릭 된 것을 빼도록 하자 remove로 모든 액티브 클래스를 제거
+    3.add를 통해서 추가를 하는데
+    4. this => 이벤트가 발생된 요소
+    내가 클릭한 이벤트를 처리할 때 많이 사용 됨
+    
+
+ -->
+<script>
+    $(document).ready(function(){
+        $('.page-item').click(function(){
+            $('.page-item').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+</script>
+<body>
+
+<div class="container">
+  <h2>Pagination - Active State</h2>
+  <p>Add class .active to let the user know which page he/she is on:</p>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
