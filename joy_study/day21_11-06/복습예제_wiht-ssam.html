@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>복습-쌤과</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu1').click(function(){
+            $('.menu1>ul').slideToggle(500);
+            }) //메뉴 클릭 이벤트 종료
+            $('.ham').click(function(){
+                   //left 메뉴가 안보이는 경우, 
+                if(!$('.left').hasClass('show')){
+                $('.left').animate({left:'0'},800)
+            }
+            //left 메뉴가 보이는 경우
+            else{
+                $('.left').animate({left:'-300px'},800);
+             
+             }
+             //left메뉴가 나왔는지 안나왔는지 확인하기 위해
+             //show라는 클래스를 이용, show클래스는 css에 없는 클래스
+             $('.left').toggleClass('show');
+            })//레프트 클릭 이벤트 종료
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0 ;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        nav{
+            background-color: yellow;
+        }
+        .menu{
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 25px;
+            border: 1px solid yellow;
+
+        }
+        .menu:hover{
+            border: 5px solid white;
+            border-radius: 5px;
+        }
+        
+        nav>ul{
+            display: flex;
+        }
+        nav li{
+            cursor: pointer;
+        }
+        .menu>ul{
+            width: 200px;
+            margin-top: -10px;
+            display: none;
+        }
+        .sub-menu{
+            margin-top: 10px;
+            background-color: rgb(243, 255, 176);
+            border: 1px solid  rgb(243, 255, 176);
+        }
+        .sub-menu:hover{
+            border: 5px solid white;
+        }
+        .ham{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 230, 230);
+            margin-top: -50px;
+            float: right;
+            cursor: pointer;
+        }
+        .ham:hover{
+            border: 5px solid white;
+            border-radius: 5px;
+        }
+        .ham::after{
+            display: block;
+            content: "";
+            box-sizing: border-box;
+        }
+        .left{
+            width: 300px;
+            height: 500px;
+            padding: -50px;
+            left:-500px;
+            background-color: rgb(248, 248, 201);
+            position: absolute;
+            
+        }
+        .show{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="menu menu1">메뉴1
+                <ul>
+                    <li class="sub-menu">서브1</li>
+                    <li class="sub-menu">서브2</li>
+                </ul>
+            </li>
+            <li class="menu menu2">메뉴2</li>
+            <li class="menu menu3">메뉴3</li>
+        </ul>
+        <div class="ham"></div>
+    </nav>
+    <div>
+        <div class="left show"></div>
+    </div>
+    
+</body>
+</html>
