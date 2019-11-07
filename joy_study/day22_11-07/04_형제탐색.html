@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        siblings() : 내 기준으로 모든 형제들
+        next() : 내 앞에 있는 형제
+        nextAll() : 내 뒤 에 있는 모든 애들
+        nextUntil() : 해당형제를 
+        prev() : 내 앞까지해서 어디 까지 갈것인지 찾는 
+        prevAll() : 내 앞에 있는 애들 중에서 일치하는 애들만 
+        prevUntil() : 선택자 전까지
+     -->
+    <script>
+        $(document).ready(function(){
+            $('.five').siblings().css('border','1px solid black');
+            $('.five').siblings('.one')
+                        .css('border-radius','5px');
+             $('.five').next().css('text-align','center');
+             $('.five').prev()
+                        .css('text-align','right');
+             $('.five').nextAll()
+                        .css('color','red');
+             $('.five').nextUntil('.seven')
+                        .css('font-weight','bold')
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="one">1</li>
+        <li class="two">2</li>
+        <li class="three">3</li>
+        <li class="four">4</li>
+        <li class="five">5</li>
+        <li class="six">6</li>
+        <li class="seven">7</li>
+        <li class="eigth">8</li>
+    </ul>
+</body>
+</html>
