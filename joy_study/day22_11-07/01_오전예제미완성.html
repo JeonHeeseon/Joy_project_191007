@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.Q').click(function(){
+                $('#a').
+                $('#a').append('<input type="text" id="A"><button class="search">검색</button>');
+               }) //Q 클릭 이벤트 끝
+            }) //search 이벤트 끝
+    
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box1{
+            width: 50%;
+            height: 200px;
+            background-color: bisque;
+            margin: calc(100% / 5);
+        }
+        .box2{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box1">
+        <button class="search">질문하기</button>
+        <div class="box2"><input type="text" id="a"><button>검색</button></div>
+    </div>    
+</body>
+</html>
