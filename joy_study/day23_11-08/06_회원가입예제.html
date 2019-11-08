@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('form').submit(function(){
+                $('#id').html('');
+                $('#pw1').html('');
+                $('#pw2').html('');
+                var id = $('#id').val();
+            if(id.length = 0){
+                $('#idError').html('아이디는 필수 항목입니다.');
+                return false;
+            }
+            var pw1 = $('#pw1').val();
+            if(pw1.length == 0){
+                $('#idError').html('비밀번호는 필수 항목입니다.');
+                return false;
+            }
+            var pw2 = $('#pw2').val();
+            if(pw2.length == 0){
+                $('#idError').html('비밀번호가 일치하지 않습니다.');
+                return false;
+                }
+            })         
+        })
+    </script>
+    <style>
+        .red{
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" >
+        <div>
+            <input type="text" id="id" placeholder="아이디">
+            </div>
+            <div id="idError" class="red"></div>
+            <div>
+            <input type="text" id="pw1" placeholder="비밀번호">
+            </div>
+            <div id="pw1Error" class="red"></div>
+            <div>
+            <input type="text" id="pw2" placeholder="비밀번호 확인">
+            </div>
+             <div id="pw2Error" class="red"></div>
+            <button>회원가입</button>
+        </div>
+    </form>
+</body>
+</html>
