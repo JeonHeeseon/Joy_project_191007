@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>버튼타입으로
+            submit 함수 실행하는 방법</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 버튼타입으로
+         submit 함수 실행하는 방법
+
+    -->
+    <script>
+        /*
+
+        */
+        $(document).ready(function(){
+         $('button').click(function(){
+             $('#idError').html('');
+             $('#pw1Error').html('');
+             $('#pw2Error').html('');
+            var id = $('#id').val();
+      
+            if(id.length == 0){
+                $('#idError').html('아이디는 필수 항목입니다.');
+                return false;
+            }
+            var pw1 = $('#pw1').val();
+            if(pw1.length == 0){
+                $('#pw1Error').html('비밀번호는 필수 항목입니다.');
+                return false;
+            }
+            var pw2 = $('#pw2').val();
+            if(pw2 != pw1){
+                $('#pw2Error').html('비밀번호와 일치하지 않습니다.');
+                return false;
+            }
+            // submit 이벤트를 실행하라.
+            $('form').submit();
+          })
+        })
+        </script>
+        <style>
+        .red{
+            font-size: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        </style>
+        
+</head>
+<body>
+   <form action="">
+       <div>
+           <input type="text" placeholder="아이디" id="id">
+       </div>
+       <div id="idError" class="red"></div>
+       <div>
+            <input type="password" placeholder="비번" id="pw1">
+        </div>
+        <div id="pw1Error" class="red"></div>
+        <div>
+            <input type="password" placeholder="비번확인" id="pw2">
+        </div>
+        <div id="pw2Error" class="red"></div>
+        <button type="button">회원가입</button>
+   </form>
+</body>
+</html>
