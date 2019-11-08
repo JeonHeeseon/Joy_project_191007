@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery focus() Method</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- jQuery change() Method
+        $('선택자').change(function(){
+            구현;
+        })
+    - 내용이 변경 되었을 때 (입력 내용이 변경 되고, focus가 변경되어야 적용)
+    실행되는 change 이벤트를 등록
+    - 주로 input태그나 select 태그에 적용
+    -->
+    <script>
+        /*
+
+        */
+        $(document).ready(function(){
+         $('button').click(function(){
+             $('#idError').html('');
+             $('#pw1Error').html('');
+             $('#pw2Error').html('');
+            var id = $('#id').val();
+      
+            if(id.length == 0){
+                $('#idError').html('아이디는 필수 항목입니다.');
+                $('#id').focus();
+                return false;
+            }
+            var pw1 = $('#pw1').val();
+            if(pw1.length == 0){
+                $('#pw1Error').html('비밀번호는 필수 항목입니다.');
+                $('#pw1').focus();
+                return false;
+            }
+            var pw2 = $('#pw2').val();
+            if(pw2 != pw1){
+                $('#pw2Error').html('비밀번호와 일치하지 않습니다.');
+                $('#pw2').focus();
+                return false;
+            }
+            // submit 이벤트를 실행하라.
+            $('form').submit();
+          })
+          $('#id').change(function(){
+            var id = $('#id').val();
+      
+            if(id.length == 0){
+             $('#idError').html('아이디는 필수 항목입니다.');
+             }
+          })
+        /*
+          keyup 
+          아이디를 쓰고 다시 지우면 안내창이 뜨도록 하는 함수
+         $('#id').keyup(function(){
+           $('#idError').html('');
+            var id = $('#id').val();
+            if(id.length == 0){
+             $('#idError').html('아이디는 필수 항목입니다.');
+             }
+          })
+        */
+        })
+        </script>
+        <style>
+        .red{
+            font-size: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        </style>
+        
+</head>
+<body>
+   <form action="">
+       <div>
+           <input type="text" placeholder="아이디" id="id">
+       </div>
+       <div id="idError" class="red"></div>
+       <div>
+            <input type="password" placeholder="비번" id="pw1">
+        </div>
+        <div id="pw1Error" class="red"></div>
+        <div>
+            <input type="password" placeholder="비번확인" id="pw2">
+        </div>
+        <div id="pw2Error" class="red"></div>
+        <button type="button">회원가입</button>
+   </form>
+</body>
+</html>
