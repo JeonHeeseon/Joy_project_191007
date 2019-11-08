@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hover 이벤트 등록</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        jQuery의 장점: 브라우저에 상관없이 동작한다.
+        이벤트 등록 방법 
+    $('선택자').이벤트명(function(){
+        구현;
+    })
+
+    또 다른 방법
+    $('선택자').on('이벤트명',function(){
+        구현;
+    })
+    
+    * hover 이벤트 실행 방법 2개
+    1. function 이 하나 일때 
+    $('선택자').hover(function(){
+
+    })
+    -마우스를 선택자에 올려두거나 벗어났을 때 동작을 함
+    -마우스에 올려뒀을 때 1번,
+     벗어났을 때 1번씩 실행 됨
+     -mousein과 mouseout이 합쳐진 함수
+     -mousein일때와 mouseout일 때 같은 함수가 실행되는 경우이다.
+    
+     2.function 함수가 2 개 일때
+      $('선택자').hover(function(){},function(){})
+      -첫번째 함수는 mousein일 때 동작 하고 두 번 째 함수는 mouseout 일 때 동작 한다.
+    
+    -->
+    <script>
+        /*
+        마우스가 들어왔을 때 호버처리 방법
+            $(document).ready(function(){
+            $('.menu').hover(function(){
+                $(this).children().slideToggle(500); 
+            })
+        })
+        */
+        $(document).ready(function(){
+            $('.menu').hover(function(){
+                $(this).children().slideDown(500);
+            },function(){
+                $(this).children().slideUp(500);
+            })
+        })
+        </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+            cursor: pointer;
+        }
+        .menu{
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 48px;
+            color: white;
+
+        }
+        .menu:hover{
+            border: 2px solid rgba(255, 255, 255, 0.904);
+            border-radius: 5px;
+        }
+        nav>ul{
+            display: flex;
+        }
+        nav{
+            background-color: black;
+        }
+        .submenu{
+            display: none;
+            background-color: black;
+        }
+        .submenu:hover{
+           background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="menu">메뉴1
+                <ul class="submenu">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                </ul>
+            </li>
+            <li class="menu">메뉴2
+                <ul class="submenu">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                </ul>
+            </li>
+           <li class="menu">메뉴3
+                <ul class="submenu">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
