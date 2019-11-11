@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        대상 :메뉴
+        이벤트 : click
+        사용해야하는 함수들 :
+        -addClass(), removeClass()
+        동작순서
+        1. 전체 메뉴에 A라는 클래스를 제거한다.
+        2. 클릭한 메뉴에만 A라는 클래스를 추가한다. 
+     -->
+    <script>
+    $(function(){
+        $('.box').click(function(){
+            $('.box').removeClass('bg-white');
+            $(this).addClass('bg-white');
+        })
+    });
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            height: 50px;
+            background-color: black;
+        }
+        nav>ul{
+            display: flex;
+            list-style: none;
+            
+        }
+        .box{
+            margin-left: 20px;
+            color: white;
+            width: 100px;
+            width: 80px;
+            line-height: 49px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .box:hover,.bg-white{
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="box">메뉴1</li>
+            <li class="box">메뉴2</li>
+            <li class="box">메뉴3</li>
+        </ul>
+    </nav>
+</body>
+</html>
