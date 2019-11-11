@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>요소 추가 삭제</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 요소 추가
+        대상 : 버튼
+        이벤트 : click
+        사용해야하는 함수들 : append() =>자식 요소 끝에 새 요소를 추가 할 때 사용
+        동작순서
+        1. 클릭하면 마지막 이미지 뒤에 새 이미지 추가
+     -->
+
+     <!-- 요소 삭제
+        사용해야하는 함수들 : last => 해당 요소들 중 마지막 요소를 찾는 함수
+                            remove => 본인을 포함하여 자식까지 다 지우는 함수
+        동작순서
+        1. 마지막 이미지를 삭제
+
+
+      -->
+     <script>
+    $(function(){
+        $('.btn-add').click(function(){
+            $('.parent').append('<img src="/day2/cat.png" alt="" class="img">');
+             })
+            $('.btn-del').click(function(){
+                $('.parent>img').last().remove();
+            })  
+    })
+     </script>
+     <style>
+         .button{
+             display: flex;
+         }
+         button{
+             background-color: white;
+             border: 1px solid black;
+             width: 50%;
+             height: 50px;
+             cursor: pointer;
+         }
+         .btn-add{
+             border-right: none;
+         }
+     </style>
+</head>
+<body>
+    <div class="button">
+    <button class="btn-add">추가</button>
+    <button class="btn-del">삭제</button>
+    </div>
+    <div class="parent">
+    <img src="/day2/cat.png" alt="" class="img">
+    </div>
+</body>
+</html>
