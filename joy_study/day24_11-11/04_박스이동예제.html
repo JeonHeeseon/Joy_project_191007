@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>사이드 박스 이동 이벤트 예제</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        대상 : button
+        이벤트 : click
+        사용해야하는 함수들 : animate, css
+        
+        animate({css속성들}, 속도, 콜백함수)
+        
+        동작순서 :
+        1. css의 속성 중 margin-left의 값을 가져와서
+        변수에 저장
+        2.ml 이 -xxx 이면, animate를 이용하여, 
+        margin-left의 값을 202px 로 변경,
+        3. ml 이 -xxx가 아니면, animate를 이용하여,
+        margin-left의 값을 -xxx으로 변경
+     -->
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                var ml = $('.side').css('margin-left');
+                if(ml != '0px'){
+                    $('.side').animate({'margin-left': 0},500);
+                }
+                else{
+                    $('.side').animate({'margin-left': '-202px'},500);
+                }
+              
+            })
+        })
+
+    </script>
+    <style>
+        *{
+            margin: 0;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 80px;
+            height: 50px;
+            color: white;
+            font-size: 20px;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .side{
+            border: 1px solid black;
+            width: 200px;
+            height: 500px;
+            margin-left: -202px;
+        }
+        button:hover{
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <br>
+    <br>
+    <div class="side"></div>
+</body>
+</html>
