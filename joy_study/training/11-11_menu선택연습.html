@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메뉴 선택 버튼 연습</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        대상 : 버튼
+        이벤트 : click
+        사용해야하는 함수들 : removeClass(),addClass()
+        동작순서
+        1.
+     -->
+    
+    <script> 
+    $(function(){
+        $('.menu').click(function(){
+            $('.menu').removeClass('bg-white')
+            $(this).addClass('bg-white')
+        })
+    })
+
+    </script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        background-color: black;
+    }
+    nav>ul{
+        display: flex;
+    }
+    .menu{
+        margin-left: 20px;
+        text-align: center;
+        line-height: 47px;
+        height:50px;
+        width: 80px;
+        color: white;
+        list-style: none;
+        cursor: pointer;
+    }
+    .menu:hover,.bg-white{
+        border: 2px solid yellow;
+    }
+</style>    
+<body>  
+    <nav>
+        <ul>
+            <li class="menu">메뉴1</li>
+            <li class="menu">메뉴2</li>
+            <li class="menu">메뉴3</li>
+        </ul>
+    </nav>
+</body>
+</html>
