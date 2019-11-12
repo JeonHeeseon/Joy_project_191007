@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>설문지 예제 each로 구현</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        기존 이벤트 등록 방법
+        $('선택자').이벤트명(function(){
+
+        })
+        이벤트가 아닌데 위 와 같이 쓰이는 애가 있음
+
+        $('선택자').each(function(){
+
+        })
+        
+        each : 요소들을 각각 하나씩 꺼내어 작업할 때 사용한다.
+                each는 이벤트가 아니기 때문에 이벤트 안에 사용이 된다.
+                $('선택자').이벤트명(function(){
+                    $('선택자').each(function(){
+
+                    });
+                });
+     -->
+    <script>
+        var cnt1 = 0;
+        $(function(){
+           $('.sub').click(function(){
+               /*
+               버튼을 클릭 할 때 cnt2가 생성 되어 클릭 이벤트가 종료되기 전까지
+               유지됨.
+               지역변수(cnt2) 전역변수(cnt1) 차이를 보여주는 예제*/
+               var cnt2 = 0;
+               cnt1++;
+               cnt2++;
+               console.log('cnt1',cnt1)
+               console.log('cnt2',cnt2)
+               var cnt = 0; //체크 된 체크박스의 갯수
+                /* 클랙스가 checkbox인 요소들을 각각 가져와서
+                function()에 구현된 작업을 실행*/
+               $('.checkbox').each(function(){
+                /*각 체크 박스의 checked 속성이 true인 요소의 갯수를 파악 */
+                //체크박스에서 꺼내온 요소 하나 this 를 의미함
+                if($(this).prop('checked')){
+                    cnt++;
+                 }
+               })
+               /* 만약 여기에 $(this) 를 하면 클릭한 버튼이 this가 되는 것임*/ 
+               if(cnt == 0) {
+                   alert('1 개 이상 선택하세요.')
+                   return false;
+               }
+           })
+        })
+        
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 5%;
+            margin-left: 30%;
+            
+        }
+        button{
+            margin-top: 20px;
+            width: 50%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    
+    </style>
+</head>
+<body>
+    <form action="">
+    <h3>취미를 선택하세요. (1개 이상)</h3>
+    <br>
+    <br>
+    <input type="checkbox" class="checkbox"> 야구
+    <br>
+    <input type="checkbox" class="checkbox"> 농구
+    <br>
+    <input type="checkbox" class="checkbox"> 축구
+    <br>
+    <input type="checkbox" class="checkbox"> 기타
+    <br>
+    <button class="sub"> 제출 </button>
+</form>
+</body>
+</html>
