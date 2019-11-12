@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>취미 설문지 예제 each로 구현</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        each 를 이용하여,  checkbox를 하나씩 살필 때,
+        checked 라는 속성을 이용하여, cnt 를 하나씩
+        증가할 때 증가만 하는게 아니라,
+        str 이라는 문자열을 만들어서 str에 
+        checked 가 true일 때의 value 값을 가져와서
+        str에 이어 붙여야한다. 
+     -->
+    <script>
+        var cnt1 = 0;
+        var str ='';
+        var arr = [];
+        $(function(){
+           $('.sub').click(function(){
+               var cnt2 = 0;
+               cnt1++;
+               cnt2++;
+               console.log('cnt1',cnt1)
+               console.log('cnt2',cnt2)
+               var cnt = 0; 
+               $('.checkbox').each(function(){
+                if($(this).prop('checked')){
+                    cnt++;
+                    str +=(cnt == 1?'':',') + $(this).val(); // 첫번째만 ','를 없애고 나머지만 ','를 붙여라
+                    // 체크된 value 값만 str에 계속 이어붙이는 작업
+                    arr.push($(this).val()); //배열
+                }
+               })
+               if(cnt == 0) {
+                   alert('1 개 이상 선택하세요.')
+                   return false;
+               }else{
+                //    alert(str)
+                    alert(arr.join(',')); //배열과 배열에서 제공하는 join을 사용하면 더 쉽다.
+               }
+           })
+               
+        })
+        
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 5%;
+            margin-left: 30%;
+            
+        }
+        button{
+            margin-top: 20px;
+            width: 50%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    
+    </style>
+</head>
+<body>
+    <form action="">
+    <h3>취미를 선택하세요. (1개 이상)</h3>
+    <br>
+    <br>
+    <input type="checkbox" class="checkbox" value="야구"> 야구
+    <br>
+    <input type="checkbox" class="checkbox" value="농구"> 농구
+    <br>
+    <input type="checkbox" class="checkbox" value="축구"> 축구
+    <br>
+    <input type="checkbox" class="checkbox" value="기타"> 기타
+    <br>
+    <button class="sub"> 제출 </button>
+</form>
+</body>
+</html>
