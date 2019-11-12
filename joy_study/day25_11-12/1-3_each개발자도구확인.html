@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>each 심화 예제</title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        each 를 사용하지 않으면 아래와 같이 작업을 해야한다.
+     -->
+    <script>
+    $(function(){
+        var inputs = $('input');
+        var i;
+        /*
+        $('선택자').length : 해당 선택자가 있는 요소들의 갯수를 알려줌
+        $('선택자').eq(index) : 해당 선택자가 있는 요소들 중
+        index 번째에 있는 요소, index는 0 부터 시작
+        */
+        for (i=0; i<inputs.length; i++){
+            console.log(inputs.eq(i).val())
+        }
+        /* each 를 사용하면 아래와 같이 간단하게 작업하면 된다.
+        each는 반복문의 일종이라고 생각해도 됨 */
+        $('input').each(function(){
+            console.log($(this).val())
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" value="1">
+    <input type="checkbox" value="2">
+    <input type="checkbox" value="3">
+    <input type="checkbox" value="4">
+</body>
+</html>
