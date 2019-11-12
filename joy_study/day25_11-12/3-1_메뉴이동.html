@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메뉴 이동 </title>
+    <script src="../js/jquery.min.js"></script>
+    <!-- 
+        대상 : 버튼
+        이벤트 : click
+        사용되는 함수들 :
+            .eq(index) : index +1번째 요소를 선택
+            .removeClass('클래스명') : 클래스 제거
+            .addClass('클래스명') : 클래스 추가
+            .length : 해당 요소들의 갯수
+        동작 순서 :
+        0. 전역변수 index 선언 초기값 = 0
+        1. 모든 메뉴에 select 클래스를 제거
+        2. 다음 또는 이전 메뉴에 select 클래스 추가
+           
+        2-1. 다음(right) 버튼인 경우
+        - index에 1을 더하고
+        -index  가 최대 길이를 넘지 않도록 처리
+        - 더해진 index와 일치하는 요소에 select 클래스 추가
+        2-2. 이전 (left) 버튼인 경우 
+        - index 에 1을 뺌
+        - index가 0보다 작지 않도록 처리
+        -뺀 index와 일치하는 요소에 select 클래스 추가 
+
+     -->
+    <script>
+        //0. 전역변수 index 선언 초기값 = 0
+        var index = 2;
+        $(function(){
+            $('.btn').click(function(){ 
+                // 1. 모든 메뉴에 select 클래스를 제거
+                $('.menu').removeClass('select')
+                //2. 버튼 구분 : 왼쪽 버튼 이면
+                if($(this).hasClass('left')){
+                 // - index 1을 뺌  
+                    index--;
+                    if(index < 0){
+                        index = 0
+                    }
+                    //처리 된 index와 일치하는 요소에 select 요소 추가
+                    $('.menu').eq(index).addClass('select');
+                }
+                else{
+                    //2. 버튼 구분 : 오른쪽 버튼 이면
+                     // - index 1을 더함
+                     index ++;
+                     //처리 된 index와 일치하는 요소에 select 요소 추가
+                     if(index == $('.menu').length){
+                        index == $('.menu').length -1
+                     }
+                }
+                 $('.menu').eq(index).addClass('select');
+            })
+                $('.menu').click(function(){
+                    $('.menu').removeClass('select')
+                    $(this).addClass('select');
+                    var cnt = 0 ;
+                    /* 
+                    목표 : 클릭한 메뉴의 위차와 index를 일치시킨다.
+                    each를 이용하여 모든 메뉴의 정보들을 하나씩 꺼낸다.
+                    -cnt 를 하나 증가 시키고
+                    -꺼낸 메뉴에 select 클래스가 있는지 확인하여
+                    있으면 index의 값을 cnt -1로 설정한다.
+                    */
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav{
+            height: 50px;
+            background-color: black;
+            border: 1px solid black;
+            display: flex;
+        }
+        .menu{
+            width: 80px;
+            font-size: 25px;
+            line-height: 45px;
+            cursor: pointer;
+            text-align: center;
+            list-style: none;
+        }
+        .btn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            color:black;
+            font-size: 25px;
+            text-align: center;
+            float: left;
+            cursor: pointer;
+            margin: 20px 20px;
+            background-color: white;
+            height: 50px;
+            width: 50px;
+        }
+        .select{
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="menu" value="menu1"><a href="#"> 메뉴1</a></li>
+        <li class="menu" value="menu2"><a href="#"> 메뉴2</a></li>
+        <li class="menu select" value="menu3"><a href="#"> 메뉴3</a></li>
+        <li class="menu" value="menu4"><a href="#"> 메뉴4</a></li>
+    </ul>
+    <!-- a태그로 감싸주면 커서 포인터를 안해도 되고
+    다른 페이지로 넘어가야되는 경우 쉽게 링크를 걸 수 있음 -->
+    <button class="btn left"><</button>
+    <button class="btn right">></button>
+</html>
