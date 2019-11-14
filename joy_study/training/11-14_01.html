@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        var distance = 0;
+    $(function(){
+        $('#left').click(function(){
+            distance = distance +(-100);
+            $('.lion').css("margin-left",distance)
+        })
+        $('#right').click(function(){
+            distance = distance + 100;
+            $('.lion').css("margin-left",distance)
+        })
+    })
+    </script>
+    <style>
+    .lion{
+        transition: 0.4s;
+    }
+    button{
+        height: 30px;
+        width: 80px;
+        cursor: pointer;
+        margin: 20% auto;
+    }
+    #right{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .ment{
+        text-align: left;
+        font-size: 25px;
+        color: tomato;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+  
+    <br>
+    <div class="ment"><img src="lion.gif" alt="" class="lion">
+        낼이면 불금이지요. <br></div>
+        <button id="left">left</button>
+        <button id="right">right</button>
+</body>
+</html>
