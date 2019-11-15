@@ -355,8 +355,8 @@
         cursor: pointer;
         padding: 11px 0;
         text-align: center;
-        display: flex;   /* 버튼 중앙 정렬*/
-        justify-content: center;
+        display: flex;   /* 오른쪽 2번째 박스 버튼 중앙 정렬*/
+        justify-content: center; /* 버튼 중앙 정렬*/
     }
     .r2-next-icon{
         width: 6px;
