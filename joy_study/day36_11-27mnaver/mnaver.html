@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>모바일 네이버</title>
+    <link rel="stylesheet" href="mnaver2.css">
+    <link rel="stylesheet" href="mnaver1.css">
+    <!-- 2단을 기준으로 만들 것이다. -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="mnaver.js"></script>
+</head>
+<body>
+    <div class="header">
+            <div class="search">
+                <a class="logo" href="#">
+                    <div class="logo-icon bg1"></div>
+                    <div class="back-icon bg1 display-none"></div>
+                    <div class="search-line"></div>
+                </a><!-- a 태그 logo 클래스 끝 -->
+                <div class="search-input">
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                </div>
+                <div class="search-btn-group1">
+                    <button><div class="btn-mic bg1"></div></button>
+                    <button><div class="btn-pic bg1"></div></button>
+                    <button><div class="btn-loc bg1"></div></button>
+                </div><!-- group1 클래스 끝 -->
+                <div class="search-btn-group2 display-none">
+                    <button><div class="btn-search bg1"></div></button>
+                </div><!-- group2 클래스 끝 -->
+            </div><!-- search 클래스 끝 -->
+            <div class="menu-list "> <!--menu-list2 메뉴 리스트의 색을 미리 지정해두기-->
+                <div class="menu-list-container">
+                <!--
+                    onclick 은 클릭 이벤트 발생시 처리하는 코드 
+                    자바스크립트 방식으로 이벤트를 등록하는 방법
+                    유사한 방법으로 onchange 등 이 있다.
+                    
+                    a태그를 클릭했을 때 링크 이벤트가 발생하지 않도록
+                    처리하는 방법 중 하나
+                    return false 는 클릭에 실패했다 라는 시그널
+
+                -->
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="todo bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="enter bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="pay bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="selective bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="beauty bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item sel-pink">
+                        <div class="trend bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="home bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="news bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="ent bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="sports bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="chart bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="shopping bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="place bg3"></div>
+                    </a>
+                    <a href="#" onclick="return false" class="menu-item">
+                        <div class="feed bg3"></div>
+                    </a>                    
+                </div><!--menu-list-container클래스 끝-->
+                <a href="#" onclick="return false" class="menu-plus">
+                    <div class="plus bg4"></div></a>
+            </div><!-- menu-list 끝 -->
+    </div><!-- header 클래스 끝 -->
+
+    <div class="body">
+        <div class="contents economy"></div>
+        <div class="contents news-all"></div>
+        <div class="contents news-location"></div>
+        <div class="contents pan"></div>
+        <div class="contents news-list"></div>
+        <div class="contents broadcast"></div>
+        <div class="contents press"></div>
+        <div class="contents internet box1">
+                <div class="card-title">인터넷·IT지</div>
+                <div class="card">
+                    <div class="card-row">
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div> <!--card-item 클래스 끝-->
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div> <!--card-item 클래스 끝-->
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-subs bg2"></div>
+                            <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                            <div class="card-name">데일리안</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                            <div class="card-item">
+                                <div class="card-subs bg2"></div>
+                                <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                                <div class="card-name">데일리안</div>
+                            </div> <!--card-item 클래스 끝-->
+                            <div class="card-item">
+                                <div class="card-subs bg2"></div>
+                                <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                                <div class="card-name">데일리안</div>
+                            </div>
+                            <div class="card-item">
+                                <div class="card-subs bg2"></div>
+                                <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                                <div class="card-name">데일리안</div>
+                            </div>
+                            <div class="card-item">
+                                <div class="card-subs bg2"></div>
+                                <img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" class="card-icon">
+                                <div class="card-name">데일리안</div>
+                            </div>  <!--card-item 클래스 끝-->
+                        </div> <!--card-row 클래스 끝-->
+                </div> <!--card-title 클래스 끝-->
+        </div> <!--internet 클래스 끝-->
+        <div class="contents edit"></div>
+        <div class="contents ad"></div>
+        <div class="line"></div>
+        <button class="subs-count-box display-none"></button>
+    </div> <!-- body 끝 -->
+    
+    <div class="footer"></div> <!-- footer 끝 -->
+</body>
+</html>
+
+<!-- 
+    <1> 레이아웃 잡기 (구조를 어떻게 잡을지 고민후 배치를 한다)
+    1. header - body - footer 나누기
+    2. css 2 에서 < * - search / menu-list => height / color 삽입
+    3. header에  position: fixed; width: 100%; 또는 left 0; right 0; top:0;
+       하면 됨
+       left: 0 right: 0가 합쳐져서 width: 100%의 기능을 대신한다.
+    * position : fixed 의 문제점은 무엇일까? 
+    4. .body 클래스에 margin-top => margin-top: 112px;을 주고 
+        body 태그에 background-color 지정 => background: #eff2f8 ;
+        
+        
+
+    <2>
+    모바일 네이버에 들어가서 1단일 때의 전체 사이즈를 확인하기 
+        (2단 + 1단 순서를 비교하기 위해서 
+                => 1단일 때 에서 2단으로 갈 때 왼쪽 오른 쪽으로 순서가 되어있다.)
+    
+    * 1단  / 2 단의 레이아웃 사이즈 (px)
+
+    1. 경제지 : 337.8
+    2. 신문모아보기 : 200.86
+    3. 지역지 : 141.8
+    4. 인기주제 판 : 174
+    5. 헤럴드 경제 : 547
+    
+    6. 방송통신사 : 435.8
+    7. 관심언론사 : 338
+    8. 인터넷 it지 : 337.8
+    9. 언론사 편집 : 90.8
+
+    10. 광고 : 140
+
+    header쪽 치수 합계를 위해서 사이즈 (px)
+    네이버 로고 박스 192.82
+    로고 54
+    버튼 박스 137
+    input 박스 743.84
+    그래서 calc 를 사용해서  css2에서 작업하기
+    .search-input{
+    width: calc(100% - 54px - 137px);
+}
+
+    <3> 
+    1. .body 클래스에 컨텐츠와 l1-economy div 삽입
+    mnaver2에서 contents에 width : 50% 
+    mnaver1에서 @media (max-width:640px){ .contents{
+        width:100%
+    }} 삽입
+    2. html 에 .body 클래스 안에 메뉴 div추가 
+    3. css 1 @media에서 높이 삽입
+
+    <4>
+    1. 배치 제대로 수정
+    2. .body 클래스를 기준으로 위에서 0 아래 0 1px 세로 선 만들기
+        .line  클래스에 추가했음
+    
+    <5>
+    1. header 안의 logo 자리 input , btn 자리 구조를 잡고 배치한다
+
+    <6>
+    검색창을 클릭하면 나오는 화면 구조를 잡고 왼쪽 네이버 로고는 포지션 값만 바꾸기로 한다.
+
+    <7>
+    상세 내용들의 구조를 잡고 배치한다. (주의할 것은 화면이 작아졌을 때와 커졌을 때의 갯수와 크기 /
+    pc버전의 container로 자리를 배치해서 양 옆을 맞춰던 것 처럼 패딩으로 양옆 라인을 맞춰야함)
+    경제지 / 신문1면 모아보기/ 언론사편집 등    
+ -->
