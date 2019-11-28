@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>스와이퍼 예제 디자인 변경</title>
+    <!-- swiper plugin CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <style>
+    .tabMenu{
+    background:#2f2d2d;
+    color:#fff;
+    height: 65px;
+    line-height: 40px;
+    padding-top: 4px;
+    }
+    .tabMenu .swiper-slide-active,
+    .tabMenu .active{
+        color:#ffd800;
+        font-weight: 700;
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 40px;
+    }
+    .tabMenu .swiper-slide {
+        display: inline-block;
+        width: auto;
+        padding:10px 0;
+    }
+    .dog1,.dog2,.dog3{
+        width: 50%;
+        height: 50%;
+        margin: 20px 100px 100px 50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="swiper-container tabMenu">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+                멍순이 가족
+            </div>
+            <div class="swiper-slide" data-hash="slide2">
+                멍멍이
+            </div>
+            <div class="swiper-slide" data-hash="slide3">
+                몽몽이
+            </div>
+        </div>
+    </div>
+       <!-- 스와이퍼 메뉴 -->
+    <div class="swiper-container tabContents">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+                <img src="https://images.mypetlife.co.kr/content/uploads/2019/08/06175927/pets-3715733_1920.jpg" 
+                class="dog1">
+            </div> <!-- 클래스 바디 하나와 이것과 같음-->
+            <div class="swiper-slide" data-hash="slide2">
+                <img src="http://image.babosarang.co.kr/product/detail/UNC/1909012156490436/_600.jpg" 
+                class="dog2">
+            </div>
+            <div class="swiper-slide" data-hash="slide3">
+                <img src="https://image.msscdn.net/images/goods_img/20181113/904869/904869_1_500.jpg"
+                 class="dog3">
+            </div>
+        </div>
+    </div>
+ <!-- 스와이퍼 컨텐츠 끝 -->
+    <script>
+        var tabMenu = new Swiper('.tabMenu', { //.tabMenu 스와이퍼를 만들 건데 어떤 기준으로 할 건지 정하는 것 탭메뉴 클래스를 가진 선택자를 스와이퍼로 만들겠다
+             // 중괄호 안에 있는 것들은 스와이퍼에 대한 옵션을 말함
+            spaceBetween: 30,  //스페이스 간격을 30만큼 잡겠다.
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2, 
+            slideToClickedSlide: true,
+            hashNavigation: true,
+        }); // 해당하는 기능을 가진 객체를 만드는 것
+        var tabContents = new Swiper('.tabContents', {
+            spaceBetween: 10,
+            hashNavigation: true,
+        });
+        tabContents.controller.control = tabMenu;
+        tabMenu.controller.control = tabContents;
+    </script> 
+    
+</body>
+</html>
+
+
+
+<!-- 
+
+스와이퍼 예제 가져온 경로
+1. https://github.com/st8324 
+2. SmartWebApp/portfolio/front-end/
+3. swiper.html 들어가서 복사
+4. swiper.css 들어가서 복사
+
+-->
