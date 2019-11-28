@@ -48,6 +48,7 @@ body{
     line-height: 51px;
     display: inline-block;
     position: relative;
+    width: auto;
 }
 .menu-item>div{
     position: relative;
@@ -139,6 +140,9 @@ body{
 .body{
     margin-top: 112px;
     position: relative;
+}
+.tabContents .swiper-slide{
+    margin-top: 112px;
 }
 .body::after{
     clear: both;
