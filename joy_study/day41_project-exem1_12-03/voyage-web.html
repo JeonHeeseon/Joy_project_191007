@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>voyage-web</title>
+    <link rel="stylesheet" href="voyage-web.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="voyage-web.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="https://kit.fontawesome.com/dfdbe46ef1.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="tab-bar">
+                <div class="left-tab-bar">
+                    <a href="#" class="agent-box">
+                        <i class="fas fa-user-alt agent-icon"></i>
+                        Agent Login
+                    </a>
+                    <div class="bar1"></div>
+                    <a href="#" class="customer-box">
+                        <i class="fas fa-user-alt customer-icon"></i>
+                        Customer Login
+                    </a>
+                    <div class="bar1"></div>
+                    <a href="#" class="not-a-member">
+                        <i class="far fa-sticky-note"></i>
+                        Not a Member?
+                    </a>
+                    <a href="#" class="register">
+                        Register
+                    </a>
+                    <div class="bar1"></div>
+                    <a href="#" class="call-us">
+                        Call Us Now : 815-123-4567
+                    </a>
+                    <div class="bar1"></div>
+                </div> <!--left-tab-bar 클래스 끝-->
+                <div class="right-tab-bar">
+                    <div class="facebook-box">
+                        <div class="bar2"></div>
+                        <a href="#" class="tab-bar-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="twitter-box">
+                        <div class="bar2"></div>
+                        <a href="#" class="tab-bar-iconn">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="tumblr-box">
+                        <div class="bar2"></div>
+                        <a href="#" class="tab-bar-icon">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </div>
+                    <div class="pinterest-box">
+                        <div class="bar2"></div>
+                        <a href="#" class="tab-bar-icon">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <div class="bar2"></div>
+                    </div>
+                </div><!--right-tab-bar 클래스 끝-->
+            </div> <!-- tab-bar 클래스 끝-->
+            <nav class="nav">
+                <div class="logo-box">
+                    <img src="../day38_project-exem1_11-29/img/logo.png" alt="" class="logo">
+                </div> <!-- logo-box 클래스 끝-->
+                <div class="right-text-box">
+                    <div class="right-text">
+                        <div class="home">HOME</div>
+                    </div>
+                    <div class="right-text">
+                        <div class="destinations">DESTINATIONS</div>
+                    </div>
+                    <div class="right-text">
+                        <div class="criuses">CRIUSES</div>
+                    </div>
+                    <div class="right-text">
+                        <div class="specials">SPECIALS</div>
+                    </div>
+                    <div class="right-text">
+                        <div class="holidays">HOLIDAYS</div>
+                    </div>
+                    <div class="right-text">
+                        <div class="blog">BLOG</div>
+                    </div>
+                    <div class="search-icon-container">
+                        <div class="search-icon-cbox">
+                            <i class="fas fa-search search"></i>
+                        </div>
+                    </div>
+                    <!-- search-icon-click-container / display-none 자리 -->
+                    <div class="search-icon-click-container display-none">
+                        <div class="search-icon-click-box"></div>
+                        <div class="search-icon-click-close">X</div>
+                        <div class="search-icon-click-input-box"><input type="text" placeholder="검색어를 입력해주세요." class="search-icon-click-input"></div>
+                    </div>
+                </div><!--right-text 클래스 긑-->
+            </nav> <!-- nav  클래스 / 태그 끝 -->
+            <div class="banner">
+                <div class="banner-container">
+                    <div class="main-img-box">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지.jpg" class="main-img" data-hash="slide1">
+                    </div>
+                    <!-- <div class="main-img-box">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지2.jpg" class="main-img" data-hash="slide2">
+                    </div>
+                    <div class="main-img-box">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지3.jpg" class="main-img" data-hash="slide3">
+                    </div> -->
+                    <div class="main-img-op"></div>
+                    <div class="main-img-text-box">   
+                        <p class="main-img-text1">TO TRAVEL IS TO LIVE</p>
+                        <br>
+                        <p class="main-img-text2">You Dont't Need Magic to Disappear.
+                            All you need is a destination.</p>
+                    </div> <!-- main-img-text-box 클래스 끝-->
+                    <!-- 버튼 태그 호버 했을 때 색 변함 추가해야함  -->
+                    <div class="banner-l-btn"><div><</div></div>
+                    <div class="banner-r-btn"><div>></div></div>
+                    <div class="main-btn-box">
+                        <a href="#" class="main-1-btn">SHOW ON THE MAP</a>
+                        <a href="#" class="main-2-btn">MORE INFO</a>
+                    </div>
+                </div><!--banner-container 클래스 끝-->
+            </div><!--banner 클래스 끝-->
+            <div class="holiday-tab">
+                <div class="find-l-box">
+                    <div class="find-text1">FIND YOUR</div>
+                    <div class="find-text2">HOLIDAYS</div>
+                    <img src="../day38_project-exem1_11-29/img/holiday_detail_shape.png" class="find-shape">
+                </div>
+                <div class="find-r-box">
+                        <div class="where-text-box">Where
+                            <div class="w-text-box-container">    
+                                <i class="fas fa-globe-asia w-icon"></i>
+                                <input class="w-text" type="text" placeholder="distination">
+                            </div>
+                        </div>
+                        <div class="when-text-box">When
+                            <div class="w-text-box-container">
+                                <i class="far fa-calendar-alt w-icon"></i>
+                                <input class="w-text" type="text" placeholder="select date">
+                            </div>
+                        </div>
+                    <div class="search-icon-box"><a href="#" class="holiday-tap-search-btn">Search</a></div>
+                </div> <!--holiday-tab-sc 클래스 끝-->
+            </div><!--holidays-tab 클래스 끝-->
+        </div> <!--header 클래스 끝-->
+        
+        <div class="content">
+            <div class="special-offers">
+                <div class="special-offers-text-box">
+                    <div class="special-offers-text1">SPECIAL OFFERS</div>
+                    <div class="special-offers-text2">Best 2019 packages where people love to stay!</div>
+                </div>
+                <div class="special-offers-img-container">
+                    <div class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_01.jpg" class="special-offers-img1">
+                        </div>
+                    </div>
+                    <div class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_02.jpg"  class="special-offers-img2">
+                        </div>
+                    </div>
+                    <div class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_03.jpg" class="special-offers-img3" >
+                        </div>
+                    </div>
+                   <div class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_04.jpg"  class="special-offers-img4">
+                        </div>
+                   </div>
+                    <div class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_05.jpg" class="special-offers-img5">
+                        </div>
+                    </div>
+                   <div  class="special-offers-box">
+                        <div class="special-offers-img-box">
+                            <img src="img/sub_06.jpg" class="special-offers-img6">
+                        </div>
+                   </div>
+                </div><!--special-offers-img-container 클래스 끝-->
+            </div><!--special-offers 클래스 끝-->
+            <div class="holiyday-type">
+                <div class="holiyday-type-bg-img-box">
+                    <div class="holiyday-type-bg-img-op"></div>
+                    <img src="../day38_project-exem1_11-29/img/하단이미지.jpg" class="holiyday-type-bg-img">
+                </div>
+                <div class="holyday-type-text-box">
+                    <div class="holyday-type-text1">HOLIDAYS TYPE</div>
+                    <div class="holyday-type-text2">get explore your dream to travel the world!</div>
+                </div>
+                <div class="holyday-type-icon-container-white">
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon1.png" class="holyday-type-icon">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon2.png" class="holyday-type-icon">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon3.png" class="holyday-type-icon">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon4.png" class="holyday-type-icon">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon5.png" class="holyday-type-icon">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon6.png" class="holyday-type-icon">
+                    </div>
+                </div> <!-- holyday-type-icon-container-white 클래스 끝-->
+                <div class="holyday-type-icon-container-mint display-none">
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon1-2.png" class="holyday-type-icon">
+                        </div>
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon2-2.png" class="holyday-type-icon">
+                        </div>
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon3-2.png" class="holyday-type-icon">
+                        </div>
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon4-2.png" class="holyday-type-icon">
+                        </div>
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon5-2.png" class="holyday-type-icon">
+                        </div>
+                        <div class="holyday-type-icon-box">
+                            <img src="../day38_project-exem1_11-29/img/holiday-icon6-2.png" class="holyday-type-icon">
+                        </div>
+                    </div> <!-- holyday-type-icon-container-mint 클래스 끝-->
+            </div><!--holiyday-type 클래스 끝-->
+            <div class="happy-clients">
+                <div class="happy-clients-ment-container">
+                    <div class="happy-clients-ment1">HAPPY CLIENTS</div>
+                    <div class="happy-clients-ment2">what customer say about us and why love our services!</div>
+                </div>
+                <div class="happy-clients-text-container">
+                    <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                    <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                        <br>
+                        ting industry. Lorem lpsum has been the industry's.
+                    </div>
+                    <div class="happy-clients-text2">
+                        Client Name
+                    </div>
+                    <div class="happy-clients-text3">
+                        United States
+                    </div>
+                </div>
+                <div class="happy-clients-text-container">
+                    <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                    <div class="happy-clients-text1"></div>
+                    <div class="happy-clients-text2"></div>
+                    <div class="happy-clients-text3"></div>
+                </div>
+                <div class="happy-clients-text-container">
+                    <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                    <div class="happy-clients-text1"></div>
+                    <div class="happy-clients-text2"></div>
+                    <div class="happy-clients-text3"></div>
+                </div>
+                <div class="happy-clients-text-container">
+                    <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                    <div class="happy-clients-text1"></div>
+                    <div class="happy-clients-text2"></div>
+                    <div class="happy-clients-text3"></div>
+                </div>
+                <div class="happy-clients-text-container">
+                    <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                    <div class="happy-clients-text1"></div>
+                    <div class="happy-clients-text2"></div>
+                    <div class="happy-clients-text3"></div>
+                </div>
+            </div><!--happy-clients 클래스 끝-->
+        </div><!-- content 클래스 끝-->
+    </div> <!-- body 클래스 끝-->
+    <div class="footer">
+
+    </div><!-- footer클래스 끝-->
+</body>
+</html>
