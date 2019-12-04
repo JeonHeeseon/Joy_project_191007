@@ -1,0 +1,32 @@
+voyage web
+
+body 
+    heiht : 2995px 
+    width: 1700px
+
+header  
+    전체 heiht: 934px
+        logo 
+        heiht : 150px + border 1px
+    tapbar heiht: 40px
+        background-color: #2c3e50
+    nav heiht :92px
+    banner heiht : 697px 
+        l-btn heiht : 59
+        l-btn width:   222  
+        l-btn border-radius : 4px
+        background-color : #1dd2af
+        r-btn heiht : 59
+        r-btn width :  159
+        r-btn border : 2 px
+    holidays type 
+        heiht 104px :
+        background-color : #2c3e50
+
+        cruise city honeymoon adventure safari beach icon :
+        width : 157 px
+        heiht : 157 px
+        image-position: 
+
+content heiht : 1615 px
+footer : 446px
