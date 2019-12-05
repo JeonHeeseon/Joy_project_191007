@@ -157,8 +157,8 @@
 }
 .search-icon-click-container{
     width: 1583px;
-    height: 450px;
-    background-color: rgba(49, 56, 63, 0.9);
+    height: 650px;
+    background-color:white;
     position: absolute;
     margin-top: -200px;
     margin-left: -672px;
@@ -172,11 +172,7 @@
     position: absolute;
 }
 .search-icon-click-close{
-    font-size: 35px;
-    float: right;
-    color: white;
-    font-weight: 700;
-
+   
 }
 /*  banner 관련 css   */
 .banner{
@@ -188,9 +184,11 @@
     display: flex;
     position: relative;
 }
-.main-img{
+.main-img-box>img{
     height: 697px;
     width: 1583px;
+}
+.main-img{
     display: block;
     float: left;
 }
@@ -204,6 +202,7 @@
     position: absolute;
     margin-top: 200px;
     margin-left: 25%;
+    cursor: default;
 }
 .main-img-text1{
     line-height: 25px;
@@ -228,6 +227,7 @@
     background-color: rgba(255,255,255, 0.2);
     margin-top: 20%;
     cursor: pointer;
+    z-index: 900;
 }
 .banner-l-btn:hover{
     background-color: #1dd2af;
@@ -238,6 +238,8 @@
     margin-top: 15px;
     color: rgba(255,255,255, 0.3);
     font-family: monospace;
+    width: 100px;
+    height: 100px;
 }
 .banner-l-btn>div:hover{
     color: white;
@@ -251,6 +253,7 @@
     margin-top: 20%;
     right: 0;
     cursor: pointer;
+    z-index: 900;
 }
 .banner-r-btn:hover{
     background-color: #1dd2af;
@@ -322,10 +325,11 @@
     font-family: 'Noto Sans SC', sans-serif;
     margin-left: 350px;
     line-height: 22px;
+    cursor: default;
 }
 .find-r-box{
     font-family: 'Noto Sans SC', sans-serif;
-  
+    cursor: default;
     line-height: 22px;
 }
 .find-text1{
@@ -405,9 +409,12 @@
     width: 1583px;
     background-color: white;
     margin-top: -47px;
+    
 }
 .special-offers-text-box{
     font-family: 'Noto Sans SC', sans-serif;
+    cursor: default;
+
 }
 .special-offers-text1{
     font-weight: 600;
@@ -416,19 +423,24 @@
     margin-top: 50px;
     text-align: center;
     
+    
 }
 .special-offers-text2{
     font-size: 15px;
     color: #8a8a8a;
     text-align: center;
+
 }
 
 .special-offers-img-container{
-    display: flex;
     margin-top: 70px;
+    cursor: pointer;
+    width: 100%;
+}
+.special-offers-container{
+    display: flex;
 }
 .special-offers-box{
-    width: 277px;
     height: 260px;
     background-color: #eeeeee;
     margin-left: 20px;
@@ -436,8 +448,22 @@
     border-radius: 3px;
     padding: 5px;
 }
+/* special-offers-box 클릭 했을 때 제이쿼리*/
+.special-offers-click-box{
+    height: 260px;
+    background-color: #1dd2af;
+    margin-left: 20px;
+    overflow: hidden;
+    border-radius: 3px;
+    padding: 5px;
+    position: absolute;
+    z-index: 900;
+}
+
+
 .special-offers-box{
     padding-bottom: 62px;
+    width: 277px;
 }
 .special-offers-img-box{
     width: 268px;
@@ -450,7 +476,19 @@
 .special-offers-img5,.special-offers-img6{
     background-size: 193px 268px;
     display: block;
-
+}
+.special-offers-ment{
+    color: #999da0;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: default;
+}
+.special-offers-box>i{
+    float: left;
+    display: block;
+    margin-left: 230px;
+    margin-top: -25px;
+    color: #999da0
 }
 
 /* content 관련 css */
@@ -469,6 +507,7 @@
     margin: 0 auto;
     overflow: hidden;
     display: flex;
+    cursor: default;
 }
 
 .holiyday-type-bg-img-box{
@@ -514,11 +553,16 @@
     cursor: pointer;
 }
 
+.holyday-type-icon-container-mint{
+    display: flex;
+    margin: -300px;
+    margin-left: 200px;
+}
 /* .happy-clients 관련 css */
 .happy-clients{
     height : 460px;
     margin-top: 396px;
-    background-color: violet;
+    background-color: white;
     display: flex;
 }
 
@@ -528,6 +572,7 @@
     text-align: center;
     line-height: 25px;
     margin-left: 40%;
+    cursor: default;
 }
 .happy-clients-ment1{
     font-weight: 600;
@@ -546,6 +591,7 @@
 
 
 .happy-clients-text-container{
+    cursor: default;
 
 }
 .happy-clients-bur-box{
@@ -563,7 +609,7 @@
 .footer{
     height:  446px;
     width: 100%;
-    background-color: red;
+    background-color: #2c3e50;
 }
 
 /* 고정 또는 공통 css  */
