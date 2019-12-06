@@ -5,16 +5,16 @@
     box-sizing: border-box;
 }
 .body{
-    width: 100%;
+    width: 1583px;
     background-color:white;
 }
 .header{
     height: 934px;
-    width: 100%;
+    width: 1583px;
 }
 .tab-bar{
     height: 40px;
-    width: 100%;
+    width: 1583px;
     background-color: #2c3e50;
     margin-top: 0;
     position: fixed;
@@ -24,7 +24,7 @@
 }
 .left-tab-bar{
     height: 100%;
-    width: 100%;
+    width: 1583px;
     float: left;
     padding: 8px 5px 4px ;
     display: flex;
@@ -82,7 +82,7 @@
 }
 .right-tab-bar{
     display: flex;
-    margin-right: 50px;
+    padding-right: 50px;
 }
 .right-tab-bar>div>a{
     float: left;
@@ -113,7 +113,7 @@
 }
 .nav{
     height: 92px;
-    width: 100%;
+    width: 1583px;
     margin-top: 40px;
     background-color:white;
     display: flex;
@@ -129,14 +129,15 @@
     width: 120px;
 }
 .right-text-box>div{
-    text-decoration: none;
-    outline: none;
     cursor: pointer;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #5d6e80;
     text-align: center;
+}
+.right-text:hover{
+    color: #1dd2af;
 }
 
 .search-icon-cbox{
@@ -154,25 +155,46 @@
     color: black;
     font-size: 25px;
 }
+.search-icon-click-container{
+    width: 1583px;
+    height: 650px;
+    background-color:white;
+    position: absolute;
+    margin-top: -200px;
+    margin-left: -672px;
+
+}
+.search-icon-click-input{
+    margin-top: -200px;
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+}
+.search-icon-click-close{
+   
+}
 /*  banner 관련 css   */
 .banner{
     height: 697px;
-    width: 100%;
-    background-color: blue;
+    width: 1583px;
+    background-color: white;
 }
 .banner-container{
     display: flex;
     position: relative;
 }
-.main-img{
+.main-img-box>img{
     height: 697px;
-    width: 100%;
+    width: 1583px;
+}
+.main-img{
     display: block;
     float: left;
 }
 .main-img-op{
     height: 100%;
-    width: 100%;
+    width: 1583px;
     position: absolute;
     background-color: rgba(36,72, 87, 0.7);
 }
@@ -180,6 +202,7 @@
     position: absolute;
     margin-top: 200px;
     margin-left: 25%;
+    cursor: default;
 }
 .main-img-text1{
     line-height: 25px;
@@ -202,8 +225,12 @@
     width: 75px;
     height: 75px;
     background-color: rgba(255,255,255, 0.2);
-    margin-top: 250px;
+    margin-top: 20%;
     cursor: pointer;
+    z-index: 900;
+}
+.banner-l-btn:hover{
+    background-color: #1dd2af;
 }
 .banner-l-btn>div{
     font-size: 40px;
@@ -211,6 +238,11 @@
     margin-top: 15px;
     color: rgba(255,255,255, 0.3);
     font-family: monospace;
+    width: 100px;
+    height: 100px;
+}
+.banner-l-btn>div:hover{
+    color: white;
 }
 .banner-r-btn{
     position: absolute;
@@ -221,6 +253,10 @@
     margin-top: 20%;
     right: 0;
     cursor: pointer;
+    z-index: 900;
+}
+.banner-r-btn:hover{
+    background-color: #1dd2af;
 }
 .banner-r-btn>div{
     font-size: 40px;
@@ -228,6 +264,9 @@
     margin-top: 15px;
     color: rgba(255,255,255, 0.3);
     font-family: monospace;
+}
+.banner-r-btn>div:hover{
+    color: white;
 }
 .main-btn-box{
     width: 50%;
@@ -241,7 +280,7 @@
     height: 56px;
     width: 220px;
     color: white;
-    background-color: #1dd2af;
+    border: 2px solid white;
     font-family: 'Noto Sans SC', sans-serif;
     outline: none;
     text-decoration: none;
@@ -249,9 +288,11 @@
     line-height: 55px;
     padding-left: 30px;
     font-size: 18px;
-    
 }
-
+.main-1-btn:hover{
+  background-color: #1dd2af;
+  border: none;
+}
 .main-2-btn{
     height: 56px;
     width: 150px;
@@ -264,13 +305,16 @@
     line-height: 55px;
     padding-left: 25px;
     font-size: 18px;
-    margin-left: 30px;
-    
+    margin-left: 30px;   
+}
+.main-2-btn:hover{
+    background-color: #1dd2af;
+    border: none;
 }
 /* holiday-tap 관련 css  */
 .holiday-tab{
     height: 98px;
-    width: 100%;
+    width: 1583px;
     margin-top: 0px;
     background-color: #2c3e50;
     display: flex;
@@ -281,10 +325,11 @@
     font-family: 'Noto Sans SC', sans-serif;
     margin-left: 350px;
     line-height: 22px;
+    cursor: default;
 }
 .find-r-box{
     font-family: 'Noto Sans SC', sans-serif;
-    margin-right: 350px;
+    cursor: default;
     line-height: 22px;
 }
 .find-text1{
@@ -361,12 +406,15 @@
 /* special-offers 관련 css  */
 .special-offers{
     height: 635px;
-    width: 100%;
+    width: 1583px;
     background-color: white;
     margin-top: -47px;
+    
 }
 .special-offers-text-box{
     font-family: 'Noto Sans SC', sans-serif;
+    cursor: default;
+
 }
 .special-offers-text1{
     font-weight: 600;
@@ -375,43 +423,80 @@
     margin-top: 50px;
     text-align: center;
     
+    
 }
 .special-offers-text2{
     font-size: 15px;
     color: #8a8a8a;
     text-align: center;
+
 }
 
 .special-offers-img-container{
-    display: flex;
     margin-top: 70px;
+    cursor: pointer;
+    width: 100%;
+}
+.special-offers-container{
+    display: flex;
 }
 .special-offers-box{
-    width: 277px;
     height: 260px;
     background-color: #eeeeee;
     margin-left: 20px;
     overflow: hidden;
     border-radius: 3px;
+    padding: 5px;
 }
+/* special-offers-box 클릭 했을 때 제이쿼리*/
+.special-offers-click-box{
+    height: 260px;
+    background-color: #1dd2af;
+    margin-left: 20px;
+    overflow: hidden;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+    z-index: 900;
+    width: 277px;
+}
+
+
+.special-offers-box{
+    padding-bottom: 62px;
+    width: 277px;
+}
+.special-offers-img-box{
+    width: 268px;
+    height: 193px;
+    overflow: hidden;
+}
+
 .special-offers-img1,.special-offers-img2,
 .special-offers-img3,.special-offers-img4,
 .special-offers-img5,.special-offers-img6{
     background-size: 193px 268px;
     display: block;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    mask-border: 62px;
+}
+.special-offers-ment{
+    color: #999da0;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: default;
+}
+.special-offers-box>i{
+    float: left;
+    display: block;
+    margin-left: 230px;
+    margin-top: -25px;
+    color: #999da0
 }
 
 /* content 관련 css */
 
-/* .content{
-    height: 1615px;
-    width: 100%;
-    background-color: yellow;
-} */
+.content{ 
+    overflow: hidden;
+}
 
 .holiday-type{
     height: 104px ;
@@ -419,42 +504,329 @@
 }
 .holyday-type-text-box{
     font-family: 'Noto Sans SC', sans-serif;
-    width: 100%;
+    width: 1583px;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    cursor: default;
 }
 
 .holiyday-type-bg-img-box{
     display: flex;
 }
 .holiyday-type-bg-img-op{
-    width: 100%;
+    width: 1583px;
     height: 518px;
-    background-color: rgba(48, 66, 84, 0.7);
+    background-color: rgba(48, 66, 84, 0.1);
     position: absolute;
 }
 .holiyday-type-bg-img{
-    width: 100%;
+    width: 1583px;
     height: 518px;
     display: block;
 }
 .holyday-type-text1{
     color: white;
-
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    margin: -450px 55px 50px 45%;
+    position: absolute;
 }
+.holyday-type-text2{
+    color: #8a9bac;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin: -400px 55px 50px 42%;
+    position: absolute;
+}
+/* holyday-icon 관련 css*/
+.holyday-type-icon-container-white{
+    display: flex;
+    margin: -300px;
+    margin-left: 200px;
+    position: absolute;
+}
+.holyday-type-icon-box{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.holyday-type-icon-container-mint{
+    display: flex;
+    margin: -300px;
+    margin-left: 200px;
+    margin-top: 95px;
+}
+/* .happy-clients 관련 css */
 .happy-clients{
     height : 460px;
     background-color: white;
+    display: flex;
 }
 
+.happy-clients-ment-container{
+    position: absolute;
+    font-family: 'Noto Sans SC', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 40%;
+    cursor: default;
+}
+.happy-clients-ment1{
+    font-weight: 600;
+    font-size: 22px;
+    color: #3a4e61;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+.happy-clients-ment2{
+    color: #626262;
+    text-align: center;
+    font-size: 15px;
+}
+
+.happy-clients-text-container{
+    cursor: default;
+    margin: 0;
+
+}
+.happy-clients-text-container-box{
+    position: relative;;
+}
+.happy-clients-text-box{
+    display: flex;
+}
+.happy-clients-bur-box{
+    margin-top: 150px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.happy-clients-text1{
+    display: block;
+    font-size: 13px;
+    margin-top: -120px;
+    margin-left: 50px;
+    font-family: 'Noto Sans SC', sans-serif;
+
+}
+.happy-clients-text2{
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 600;
+    color: #1dd2af;
+    margin-left: 50px;
+    display: block;
+}
+.happy-clients-text3{
+    font-family: 'Noto Sans SC', sans-serif;
+    margin-left: 50px;
+    font-size: 12px;
+    display: block;
+}
+.c-happy-clients-bur-box{
+    margin-top: 170px;
+    margin-left: 20px;
+    width: 400px;
+    overflow: hidden;
+    border-top: 5px solid #1dd2af;
+    position: absolute;
+
+}
 .footer{
     height:  446px;
-    width: 100%;
-    background-color: red;
+    width: 1583px;
+    background-color: #2c3e50;
+}
+.up-footer{
+    display: flex;
 }
 
+.newsletter-text1,
+.address-text1,.tags-text1,.latest-news-text1{
+    color: #1dd2af;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.newsletter-text2{
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+.newsletter-box-container{
+    display: flex;
+    margin-top: 10px;
+    width: calc(100% / 4);
+}
+.newsletter-iput-box{
+    width: 120px;
+    height: 25px;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    position: absolute;
+}
+.newsletter-iput-box input{
+    border: none;
+    outline: none;
+    text-overflow: ellipsis;
+    margin-left: 5px;
+
+}
+.newsletter-go-icon{
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 45px;
+    background-color: #1dd2af;
+    border-radius: 2px;
+    text-align: center;
+    margin-left: 130px;
+    position: absolute;
+}
+.newsletter-go-icon button{
+    margin-left: 0px;
+    background-color: #1dd2af;
+    text-align: center;
+    border: none;
+    color: white;
+    margin-top: 6px;
+    outline: none;
+    cursor: pointer;
+}
+.latest-news-container,.tags-container,
+.address-container,.newsletter-container{
+    padding-top: 20px;
+    margin-left: 65px;
+    margin-top: 50px;
+    width: calc(100% / 4);
+    cursor: default;
+}
+.post-text1{
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+    color: white;
+    display: block;
+    margin-left: 25px;
+
+}
+.post-text2{
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    color: #1dd2af;
+    display: block;
+    margin-left: 25px;
+}
+.post-img-box{
+    border: 1px solid white;
+    width: 30px;
+}
+.post-container>img{
+    float: left;
+    display: block;
+    display: block;
+}
+
+
+.tag-box{
+    height: 35px;
+    color: white;
+    display: flex;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.tag-p{
+    margin-top: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+.agent-tag{   
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    width: 105px;
+}
+.customer-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.not-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.contact-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.new-tag{   
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.lanscape-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.tags-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.nice-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.some-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.portrait-tag{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.address-text2{
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+}
+.address-text3{
+    color: #1dd2af;
+    font-size: 12px;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+.address-text4{
+    color: white;
+    font-size: 12px;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+.sns-container{
+    color: white;
+    display: flex;  
+}
+.sns-icon{
+    margin: 5px;
+}
 /* 고정 또는 공통 css  */
 
 .display-none{
     display: none;
+}
+
+.container{
+    height:100%;
+    margin: 0 auto;
+    position: relative;
 }

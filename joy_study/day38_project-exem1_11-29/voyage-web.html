@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>voyage-web</title>
-    <link rel="stylesheet" href="voyage-web.css">
     <script src="../js/jquery.min.js"></script>
-    <script src="voyage-web.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
     <script src="https://kit.fontawesome.com/dfdbe46ef1.js" crossorigin="anonymous"></script> 
+    <script src="voyage-web.js"></script>
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="voyage-web.css">
+    
+    
+      <!-- jQuery UI 국제화 대응을 위한 라이브러리 (다국어) -->
+      
+      
+            
+      
+           
+      <!-- datepicker 한국어로 -->
+      <!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ko.js"></script> -->
+
+    
+    
+    
+    
 </head>
 <body>
     <div class="body">
@@ -95,11 +116,27 @@
                             <i class="fas fa-search search"></i>
                         </div>
                     </div>
+                    <!-- search-icon-click-container / display-none 자리 -->
+                    <div class="search-icon-click-container display-none">
+                        <div class="search-icon-click-box"></div>
+                        <div class="search-icon-click-close">X</div>
+                        <div class="search-icon-click-input-box"><input type="text" placeholder="검색어를 입력해주세요." class="search-icon-click-input"></div>
+                    </div>
                 </div><!--right-text 클래스 긑-->
             </nav> <!-- nav  클래스 / 태그 끝 -->
-            <div class="banner">
-                <div class="banner-container">
-                    <img src="../day38_project-exem1_11-29/img/메인이미지.jpg" class="main-img">
+            <div class="banner swiper-container">
+                <div class="banner-container swiper-wrapper">
+                        <div class="banner-l-btn"><div><</div></div>
+                        <div class="banner-r-btn"><div>></div></div>
+                    <div class="main-img-box swiper-slide">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지.jpg" class="main-img">
+                    </div>
+                    <div class="main-img-box swiper-slide">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지2.jpg" class="main-img">
+                    </div>
+                    <div class="main-img-box swiper-slide">
+                        <img src="../day38_project-exem1_11-29/img/메인이미지3.jpg" class="main-img">
+                    </div>
                     <div class="main-img-op"></div>
                     <div class="main-img-text-box">   
                         <p class="main-img-text1">TO TRAVEL IS TO LIVE</p>
@@ -108,8 +145,9 @@
                             All you need is a destination.</p>
                     </div> <!-- main-img-text-box 클래스 끝-->
                     <!-- 버튼 태그 호버 했을 때 색 변함 추가해야함  -->
-                    <div class="banner-l-btn"><div><</div></div>
-                    <div class="banner-r-btn"><div>></div></div>
+                    <!-- <div class="banner-l-btn"><div class="swiper-button-prev"></div></div>
+                    <div class="banner-r-btn"><div class="swiper-button-next"></div></div> -->
+                     
                     <div class="main-btn-box">
                         <a href="#" class="main-1-btn">SHOW ON THE MAP</a>
                         <a href="#" class="main-2-btn">MORE INFO</a>
@@ -132,7 +170,7 @@
                         <div class="when-text-box">When
                             <div class="w-text-box-container">
                                 <i class="far fa-calendar-alt w-icon"></i>
-                                <input class="w-text" type="text" placeholder="select date">
+                                <input class="w-text datePicker" id="date" type="text" placeholder="select date" size="10"/>
                             </div>
                         </div>
                     <div class="search-icon-box"><a href="#" class="holiday-tap-search-btn">Search</a></div>
@@ -146,26 +184,71 @@
                     <div class="special-offers-text1">SPECIAL OFFERS</div>
                     <div class="special-offers-text2">Best 2019 packages where people love to stay!</div>
                 </div>
-                <div class="special-offers-img-container">
-                    <div class="special-offers-box">
-                        <img src="img/sub_01.jpg" class="special-offers-img1">
-                    </div>
-                    <div class="special-offers-box">
-                        <img src="img/sub_02.jpg"  class="special-offers-img2">
-                    </div>
-                    <div class="special-offers-box">
-                        <img src="img/sub_03.jpg" class="special-offers-img3" >
-                    </div>
-                    <div class="special-offers-box">
-                        <img src="img/sub_04.jpg"  class="special-offers-img4">
-                    </div>
-                    <div class="special-offers-box">
-                        <img src="img/sub_05.jpg" class="special-offers-img5">
-                    </div>
-                    <div class="special-offers-box">
-                        <img src="img/sub_06.jpg" class="special-offers-img6">
-                    </div>
-                </div>
+                <div class="special-offers-img-container swiper-container">
+                    <div class="special-offers-container swiper-wrapper">
+                        <div class="special-offers-box swiper-slide ">
+                            <div class="special-offers-img-box">
+                                <img src="img/sub_01.jpg" class="special-offers-img1">
+                            </div>
+                            <div class="special-offers-ment">
+                                statue of liberty - USA
+                                <br>
+                                New Destination!
+                                    </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>                            
+                            <div class="special-offers-box swiper-slide ">
+                                    <div class="special-offers-img-box ">
+                                    <img src="img/sub_02.jpg"  class="special-offers-img2">
+                                    </div>
+                                    <div class="special-offers-ment">
+                                            Spectacular Seychelles  <br>
+                                            New Destination!
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="special-offers-box swiper-slide ">
+                                    <div class="special-offers-img-box">
+                                    <img src="img/sub_03.jpg" class="special-offers-img3" >
+                                    </div>
+                                    <div class="special-offers-ment">
+                                            Hong Kong & Macau  <br>
+                                            Bonus Extras!
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="special-offers-box swiper-slide">
+                                    <div class="special-offers-img-box">
+                                    <img src="img/sub_04.jpg"  class="special-offers-img4">
+                                    </div>
+                                    <div class="special-offers-ment">
+                                            Vietnam Highlights  <br>
+                                            New Destination!
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="special-offers-box swiper-slide">
+                                    <div class="special-offers-img-box">
+                                    <img src="img/sub_05.jpg" class="special-offers-img5">
+                                    </div>
+                                    <div class="special-offers-ment">
+                                            Spectacular Seychelles  <br>
+                                            New Destination!
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="special-offers-box swiper-slide">
+                                    <div class="special-offers-img-box">
+                                    <img src="img/sub_06.jpg" class="special-offers-img6">
+                                    </div>
+                                    <div class="special-offers-ment">
+                                            Dubai  <br>
+                                            New Destination!
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                            </div> <!-- 제일 끝 스페셜 오퍼 박스 클래스 끝-->
+                        </div><!-- special-offers-box 클래스 끝 -->
+                </div><!--special-offers-img-container 클래스 끝-->
             </div><!--special-offers 클래스 끝-->
             <div class="holiyday-type">
                 <div class="holiyday-type-bg-img-box">
@@ -176,14 +259,211 @@
                     <div class="holyday-type-text1">HOLIDAYS TYPE</div>
                     <div class="holyday-type-text2">get explore your dream to travel the world!</div>
                 </div>
+                <div class="holyday-type-icon-container-white">
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon1.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon1-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon2.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon2-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon3.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon3-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon4.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon4-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon5.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon5-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                    <div class="holyday-type-icon-box">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon6.png" class="holyday-type-icon">
+                        <img src="../day38_project-exem1_11-29/img/holiday-icon6-2.png" class="c-holyday-type-icon display-none">
+                    </div>
+                </div> <!-- holyday-type-icon-container-white 클래스 끝-->
             </div><!--holiyday-type 클래스 끝-->
-            <div class="happy-clients">
-
+            <div class="happy-clients ">
+                <div class="happy-clients-ment-container">
+                    <div class="happy-clients-ment1">HAPPY CLIENTS</div>
+                    <div class="happy-clients-ment2">what customer say about us and why love our services!</div>
+                </div>
+                <div class="happy-clients-text-box1 swiper-container">
+                    <div class="happy-clients-text-box swiper-wrapper">
+                        <div class="happy-clients-text-container swiper-slide">
+                            <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                            <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                                <br>
+                                ting industry. Lorem lpsum has been the industry's.
+                            </div>
+                            <div class="happy-clients-text2">
+                                Client Name
+                            </div>
+                            <div class="happy-clients-text3">
+                                United States
+                            </div>
+                        </div>
+                        <div class="happy-clients-text-container swiper-slide">
+                            <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                            <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                                <br>
+                                ting industry. Lorem lpsum has been the industry's.
+                            </div>
+                            <div class="happy-clients-text2">
+                                Client Name
+                            </div>
+                            <div class="happy-clients-text3">
+                                United States
+                            </div>
+                        </div>
+                        <div class="happy-clients-text-container swiper-slide">
+                            <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                            <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                                <br>
+                                ting industry. Lorem lpsum has been the industry's.
+                            </div>
+                            <div class="happy-clients-text2">
+                                Client Name
+                            </div>
+                            <div class="happy-clients-text3">
+                                United States
+                            </div>
+                        </div>
+                        <div class="happy-clients-text-container swiper-slide">
+                            <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                            <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                                <br>
+                                ting industry. Lorem lpsum has been the industry's.
+                            </div>
+                            <div class="happy-clients-text2">
+                                Client Name
+                            </div>
+                            <div class="happy-clients-text3">
+                                United States
+                            </div>
+                        </div>
+                        <div class="happy-clients-text-container swiper-slide">
+                            <img src="../day38_project-exem1_11-29/img/말풍선1.png" class="happy-clients-bur-box">
+                            <div class="happy-clients-text1">Lorem lpsum is simply text of the printing and typeset-
+                                <br>
+                                ting industry. Lorem lpsum has been the industry's.
+                            </div>
+                            <div class="happy-clients-text2">
+                                Client Name
+                            </div>
+                            <div class="happy-clients-text3">
+                                United States
+                            </div>
+                        </div>
+                    </div> <!-- swiper-wrap-->
+                </div> <!-- swiper-container 클래스 끝-->
             </div><!--happy-clients 클래스 끝-->
         </div><!-- content 클래스 끝-->
     </div> <!-- body 클래스 끝-->
     <div class="footer">
-
+        <div class="up-footer">
+            <div class="newsletter-container">
+                    <div class="newsletter-text-box">
+                            <div class="newsletter-text1">Newsletter</div>
+                            <div class="newsletter-text2">Duis autem vel eum iriure dolor in<br> 
+                                hendrerit in vulputate velit esse moles-<br> consequat, vel illum dolore.</div>
+                    </div>
+                    <div class="newsletter-box-container">
+                        <div class="newsletter-iput-box">
+                            <input type="text" placeholder="Subscribes..">
+                        </div>
+                        <div class="newsletter-go-icon">
+                            <button>GO</button>
+                    </div>
+                </div><!-- newsletter-box-container 클래스 끝-->
+            </div><!--newsletter-container 클래스 끝-->
+            <div class="latest-news-container">
+                <div class="latest-news-text1">
+                    Latest News
+                </div>
+                <div class="post-container">
+                    <div class="post-img-box">
+                        <img src="./img/latest-post.png">
+                    </div>
+                    <div class="post-text1">Postformat Gallery: Multiple
+                            <br>images</div>
+                    <div class="post-text2">October 21, 2013 - 3:31 pm</div>
+                </div>
+                <div class="snow-container"></div>
+                    <div class="post-img-box">
+                        <img src="./img/latest-snow.png">
+                    </div>
+                    <div class="post-text1">Snowboarding is fun!</div>
+                    <div class="post-text2">December 12, 2012 - 9:11 pm</div>
+                </div>
+                <div class="tags-container">
+                    <div class="tags-text1">Tags</div>
+                    <div class="tag-box">
+                        <div class="agent-tag"><p class="tag-p">Agent Login</p></div>
+                        <div class="tag-box customer-tag"><p class="tag-p">Customer Login</p></div>
+                    </div>
+                    <div class="tag-box">
+                        <div class="not-tag"><p class="tag-p">Not a Member?</p></div>
+                        <div class="tag-box contact-tag"><p class="tag-p">Contact</p></div>
+                    </div>
+                    <div class="tag-box">
+                        <div class="new-tag"><p class="tag-p">New Horizons</p></div>
+                        <div class="tag-box lanscape-tag"><p class="tag-p">Lanscape</p></div>
+                    </div>
+                    <div class="tag-box">
+                        <div class="tags-tag"><p class="tag-p">Tags</p></div>
+                        <div class="tag-box nice-tag"><p class="tag-p">Nice</p></div>
+                    </div>
+                    <div class="tag-box">
+                        <div class="some-tag"><p class="tag-p">Some</p></div>
+                        <div class="tag-box portrait-tag"><p class="tag-p">Portrait</p></div>
+                    </div>
+                </div>
+                <div class="address-container">
+                    <div class="address-text1">Address</div>
+                    <div class="address-text2">DieSachbearbeiter Schönhauser Allee
+                        <br> 167c,10435 Berlin Germany</div>
+                    <div class="address-text3">E-mail:</div>
+                    <div class="address-text4">moin@blindtextgenerator.de</div>
+                    <div class="sns-container">
+                        <div class="sns-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="sns-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="sns-icon">
+                            <i class="fab fa-tumblr"></i>
+                        </div>
+                        <div class="sns-icon">
+                            <i class="fab fa-pinterest"></i>
+                        </div>
+                    </div>
+                </div>
+            </div><!--latest-news-container 클래스 끝-->
+        </div><!--up-footer 클래스 끝 -->
+        <div class="footer-bar"></div>
+        <div class="down-footer">
+            <div class="footer-text">HOME   ::</div>
+            <div class="footer-text">Destinations   ::</div>
+            <div class="footer-text">Criuses   ::</div>
+            <div class="footer-text">Specials   ::</div>
+            <div class="footer-text">Holidays   ::</div>
+            <div class="footer-text">Blog   ::</div>
+            <div class="footer-text">Contact Us</div>
+            <div class="copyright">Copyright @ voyage. All Right Reserved.</div>
+        </div><!--down-footer 클래스 끝 -->
+        <div class="footer-up-arrow"></div>
+        <div class="footer-up-arrow-icon">
+            <i class="fas fa-arrow-up"></i>
+        </div>
     </div><!-- footer클래스 끝-->
 </body>
 </html>
+
+                          
+                           
+                           
