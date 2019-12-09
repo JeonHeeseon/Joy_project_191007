@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>원 마우스 써클 연습</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+            .yellow_circle{width:40px;height:40px;border-radius:20px;background:yellow}
+            </style>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+            <script type="text/javascript">
+            $(function(){
+              var yellow_circle = $('.yellow_circle');
+              var yellow_circle_word = $('.yellow_circle_word');
+              yellow_circle.mouseenter(function(){
+                yellow_circle_word.text('마우스 포인터가 노란색원 안에 있습니다. ');
+              });
+              yellow_circle.mouseleave(function(){
+                yellow_circle_word.text('마우스 포인터가 노란색원을 떠났습니다. ');
+              });
+            });
+            </script>
+            </head>
+            <body>
+            <div class="yellow_circle"></div>
+            <p class="yellow_circle_word">노란색 원에 마우스 포인터를 올리고 내려 보세요.</p>
+            </body>
+</html>

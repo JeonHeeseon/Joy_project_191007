@@ -21,6 +21,9 @@
     $('.auto-icon').toggleClass('active')
         $('.auto-box').toggle()
         })
+    $('.more').click(function(){
+        $(this).toggleClass('fold')
+    })
     })
 
      </script>
@@ -248,9 +251,93 @@
     .blog {width: 40px; background-position: -100px -182px;}
     .tv {width: 32px; background-position: -125px -130px; margin-top: -1px;}
     .pay{width: 25px; background-position: -70px -285px ;}
+    .black-container{
+        height: 38px;
+        box-sizing: border-box;
+        padding: 16px 0 0 14px;
+        float: left;
+    }
+    .box-menu{
+        width: 62px;
+        height: 28px;
+        border: 1px solid #e3e7ee;
+        background: #fcfdfe;
+        margin-top: -6px;
+        display: inline-block;
+    }
+    .select{
+        border-color: #00b336;
+    }
+    .black-box{
+        height: 16px; 
+        border: none;
+        background-color:transparent;
+        margin-top: 0;
+        display: block;
+        float: left;
+        margin-left: 14px;
 
-    .happybean:hover{
-        background-position:-136px -157px;
+    }
+    .dic    {
+        width: 26px; 
+        background-position: -279px -208px
+        }
+    .news   {
+        width: 28px;
+        background-position: -128px -104px;
+        }
+
+    .stock  {
+        width: 26px;
+        background-position:-36px -259px;
+        margin-top: -1px;
+    }
+    .deal   {
+        width: 40px;
+        background-position: -151px -156px;
+    }
+    .map    {
+        width: 27px;
+        background-position: -279px -130px;
+    }
+    .movie  {
+        width: 27px;
+        background-position: -234px -233px;
+    }
+    .music  {
+        width: 26px;
+        background-position: -72px -259px;
+        background-color: white;
+    }
+    .book   {
+        width: 13px;
+        background-position: -140px -78px;
+    }
+    .comic  {
+        width: 27px;
+        background-position: -279px 0;
+    }
+    .black-box:first-child{
+        margin-left: 0;
+    }
+    .bar{
+        float: left;
+        margin: 18px 16px 0;
+        width: 1px;
+        height: 14px;
+        background: #ebeef3;
+        display: block;
+    }
+    .more{
+        width: 55px;
+        background-position: 0 -104px;
+        float: left;
+        margin-top: 16px;
+        margin-left: 0;
+    }
+    .fold{
+        width: 42px;
+        background-position: 0 -208px;
     }
     /*배경 이미지 관련 css*/
     .bg1{
@@ -266,7 +353,9 @@
         height: 314px;
         margin-top: 8px;
     }
-    
+    .happybean:hover{
+        background-position:-136px -157px;
+    }
 </style>
 <body class="bg-body">
     <div>
@@ -306,6 +395,19 @@
                     <a href="#" class="pay bg3"></a>
                     <a href="#" class="tv bg3"></a>
                 </div>
+                <div class="black-container">                    <!-- black-box는 css가 없음 특정한 상태를 선택할 때 필요-->
+                    <a href="#" class="box-menu black-box bg3 dic"></a>  <!-- select 구현-->
+                    <a href="#" class="box-menu black-box bg3 news"></a>
+                    <a href="#" class="box-menu black-box bg3 stock"></a>
+                    <a href="#" class="box-menu black-box bg3 deal"></a>
+                    <a href="#" class="box-menu black-box bg3 map"></a>
+                    <a href="#" class="black-box bg3 movie"></a>
+                    <a href="#" class="black-box bg3 music"></a>
+                    <a href="#" class="black-box bg3 book"></a>
+                    <a href="#" class="black-box bg3 comic"></a>
+                </div>
+                <div class="bar"></div>
+                <a href="#" class="black-box more bg3"></a>
             </div>
         </div>
         <div class="header-bottom-line"></div>

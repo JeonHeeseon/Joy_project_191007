@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <input type="checkbox" name="" id="input1" class="check" checked value="사과">
+    <input type="box" name="" id="input1" class="" ed value="사과">
    <button>토글</button>
     <!-- 
     html문서에 있는 요소 (태그,아이디, 클래스 등) 정보를 
@@ -34,36 +34,36 @@
     console.log(input1);
     var input2 = document.getElementsByTagName('input');
     console.log(input2[0]);
-    var input3 = document.getElementsByClassName('check')
+    var input3 = document.getElementsByClassName('')
     console.log(input3[0]);
     //요소.className : 클래스 이름을 가져옴
     console.log(input3[0].className);
-    //현재 요소의 클래스명을 checkbox로 수정
+    //현재 요소의 클래스명을 box로 수정
 
-    // input3[0].className = 'checkbox' 
-    // 현재요소의 클래스 명을 checkbox로 수정
-    // 현재 요소에 checkbox 클래스를 추가 ▼
-    input3[0].className += 'checkbox';
+    // input3[0].className = 'box' 
+    // 현재요소의 클래스 명을 box로 수정
+    // 현재 요소에 box 클래스를 추가 ▼
+    input3[0].className += 'box';
         var input1 = $('#input1')
-        var input2 = $('.check')
+        var input2 = $('.')
         var input3 = $('input')
         console.log(input1.attr('type'))
         console.log(input1.prop('type'))
-        /* input1요소의 checked 속성이 없는 경우
+        /* input1요소의 ed 속성이 없는 경우
         attr은 속성이 없기 때문에 undefined 가 출력되고
         prop은 속성이 없어도 체크가 안되어 있기 때문에
         false 가 출력된다.
-        input1요소에 checked 속성이 있는 경우
+        input1요소에 ed 속성이 있는 경우
         attr은 해당 속성 값이 그대로 출력 되고,
         prop는 해당 속성이 체크되어 있기 때문에 true로 출력 된다.
         */
-        console.log(input1.attr('checked'))
-        console.log(input1.prop('checked'))
+        console.log(input1.attr('ed'))
+        console.log(input1.prop('ed'))
         /* jquery 에서 속성값을 설정하는 방법
         $ (선택자).attr('속성명',값);
         $ (선택자).prop('속성명',값);
         */
-        $('#input1').prop('checked',false); 
+        $('#input1').prop('ed',false); 
         /* input 태그에서 value 의 값을 가져오는 방법*/
         // 방법 1
         var str = $('#input1').prop('value'); 
@@ -95,8 +95,8 @@
        */
 
        $('button').click(function(){
-            var isChecked = $('#input1').prop('checked');
-            $('#input1').prop('checked',!isChecked)
+            var ised = $('#input1').prop('ed');
+            $('#input1').prop('ed',!ised)
        })
     </script>
 </body>

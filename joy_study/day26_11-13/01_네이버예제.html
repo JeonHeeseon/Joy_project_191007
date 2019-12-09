@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>네이버 레이아웃 박스 만들기</title>
+    <!-- 
+        로고 url : https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg
+        로고 컬러 : #03cf5d;
+     -->
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-width: 1100px;
+    }
+    /* header와 관련된 css */
+    .header{
+        height: 178px;
+    }
+    .header-top{
+        height: 130px;
+    }
+    .header-bottom{
+        height: 48px;
+    }
+    .header-top-line{
+        border-top:1px solid /*rgb(241, 243,246) */;
+    }
+    .header-bottom-line{
+        border-bottom: 1px solid rgb(209,216,218);
+    }
+    /* 배경색 관련 된 클래스 */
+    .bg-white{
+        background-color: white;    
+    }
+    /* mail과 관련 된 css */
+    .main{
+        height: 1466px;
+    }
+    .bg-body{
+        background-color:rgb(242, 244, 247);
+    }
+    .container{
+        width: 1080px;
+        height:100%;
+        margin: 0 auto;
+        position: relative;
+    }
+     /* position: absolute를 이용할 때 부모를 기준으로 
+    top이나 left를 잡고 싶으면 부모의 position을 relative로 만든다 */
+    .box-left{
+        width: 740px;
+        height:100%;
+        float: left;
+    }
+    .box{
+        width: 100%;
+        margin-top: 8px;
+    }
+    .left-contents1,.right-contents1{
+        height: 120px;
+    }
+    .left-contents2{
+        height: 46px;
+    }
+    .left-contents3{
+        height: 246px;
+    }
+    .left-contents4{
+        height: 884px;
+    }
+    .left-contents5{
+        height: 130px;
+    }
+    .right-contents2{
+        height: 142px;
+    }
+    .right-contents3{
+        height: 150px;
+    }
+    /* 헤더 탑과 관련된 css   
+    */
+    .logo{
+        height: 52px;  /*48px * 198*/
+        width: 200px;
+        position: absolute;
+        z-index: 10;
+        background-position: -4 -4;
+        top: 50%;
+        margin-top: -25px;
+    }
+    /* 
+    -position: absolute를 이용할 때 부모를 기준으로 
+    top이나 left를 잡고 싶으면 부모의 position을 relative로 만든다
+    -background-positon을 이용하여 이미지 위치를 조정한다.
+     */
+    .search-box{
+        width: 521px;
+        height: 49px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        left: 219px;
+
+    }
+    .search-in{
+        width: 474px;
+        height: 100%;
+        border: 2px solid #03cf5d;
+    }
+    .search{
+        width: 405px;
+        height: 23px;
+        margin: 12px 0 0 9px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: bold
+    }
+    .keyboard{
+        width: 31px;
+        height: 41px;
+        padding: 15px 6px;
+        position: absolute;
+        display: block;
+        right: 76px;
+        top: 50%;
+        margin-top: -21px;
+    }
+    .keyboard-icon{
+        width: 19px;
+        height: 11px;
+        background-position: -33px -60px;
+        display: block;
+
+    }
+    
+    .right-contents4{
+        height: 884px;
+    }
+    .right-contents5{
+        height: 130px;
+    }
+    .box-right{
+        width: 332px;
+        height: 100%;
+        float: right;
+    }
+    /*배경 이미지 관련 css*/
+    .bg1{
+        background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
+    }
+
+    .footer{
+        height: 314px;
+        margin-top: 8px;
+    }
+    
+</style>
+<body class="bg-body">
+    <div>
+    <div class="header bg-white">
+        <div class="header-top">
+            <div class="container">
+              <div class="logo bg1"></div>
+                <div class="search-box">
+                    <div class="search-in">
+                        <input type="text" class="search">
+                        <a href="#" class="keyboard">
+                            <i class="keyboard-icon bg1"></i>
+                        </a>
+                        <i class="auto-search bg1"></i>
+                    </div>
+                <div class="search-btn"></div>
+               </div>
+            </div>
+        </div>
+        <div class="header-top-line"></div>
+        <div class="header-bottom"></div>
+        <div class="header-bottom-line"></div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="box-left">
+                <div class="left-contents1 box bg-white">
+                    <a href="https://smartstore.naver.com/emporioarmani/"><img src="./img/광고1.jpg" alt=""></a>
+                </div>
+                <div class="left-contents2 box bg-white"></div>
+                <div class="left-contents3 box bg-white"></div>
+                <div class="left-contents4 box bg-white"></div>
+                <div class="left-contents5 box bg-white"></div>
+            </div>
+            <div class="box-right">
+                <div class="right-contents1 box bg-white"></div>
+                <div class="right-contents2 box bg-white"></div>
+                <div class="right-contents3 box bg-white">
+                    <a href="#"><img src="./img/광고2.jpg" alt=""></a>
+                </div>
+                <div class="right-contents4 box bg-white"></div>
+                <div class="right-contents5 box bg-white"></div>
+        </div>
+    </div>
+    <div class="footer bg-white"></div>
+</div>
+</body>
+</html>

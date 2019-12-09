@@ -13,7 +13,7 @@
 	</style>
 </head>
 <body>
-	<input type="checkbox" name="" id="input1" class="check" checked value="사과">
+	<input type="checkbox" name="" id="input1" class="check"  value="사과">
 	<button>토글</button>
 	<script>
 		/* 
@@ -33,22 +33,22 @@
 		console.log(input1.attr('type'))
 		console.log(input1.prop('type'))
 		/*
-		input1요소의 checked 속성이 없는 경우
+		input1요소의  속성이 없는 경우
 		 attr은 속성이 없기 때문에 undefined 가 출력되고
 		 prop은 속성이 없어도 체크가 안되어 있기 때문에 false
 		 가 출력된다.
-		input1요소의 checked 속성이 있는 경우
+		input1요소의  속성이 있는 경우
 		 attr은 해당 속성값이 그대로 출력되고
 		 prop는 해당 속성이 체크되어 있기 때문에 true로 출력된다.
 		*/
-		console.log(input1.attr('checked'))
-		console.log(input1.prop('checked'))
+		console.log(input1.attr(''))
+		console.log(input1.prop(''))
 		/*
 		jquery에서 속성값을 설정하는 방법
 		$(선택자).attr('속성명',값);
 		$(선택자).prop('속성명',값);
 		*/
-		$('#input1').prop('checked',false);
+		$('#input1').prop('',false);
 		//input태그에서 value의 값을 가져오는 방법1
 		var str = $('#input1').prop('value');
 		console.log(str);
@@ -75,8 +75,8 @@
 		이벤트명 : click(마우스 왼쪽 클릭)
 		*/
 		$('button').click(function(){
-			var isChecked = $('#input1').prop('checked');
-			$('#input1').prop('checked', !isChecked)
+			var is = $('#input1').prop('');
+			$('#input1').prop('', !is)
 		})
 	</script>
 </body>

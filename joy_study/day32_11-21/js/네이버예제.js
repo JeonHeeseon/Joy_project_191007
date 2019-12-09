@@ -187,6 +187,15 @@ $(function(){
 		setInputCheckbox(selMenu); 
 		initBlackMenu(selMenu); 
 	}) 
+  /*  setInterval(함수,시간) : 
+    일정시간 마단 함수를 동작시키는 함수*/
+	var cnt = 1;
+	setInterval(function(){
+		var height = '-21px';
+		ticker(height)
+		},1100);
+	}) //document.ready() 끝부분
+
 	//메뉴설정에서 체크박스를 선택했을 때 
 	$('.check-box').click(function(){ 
 		/* 
@@ -237,4 +246,16 @@ $(function(){
 		$('.more').click(); 
 		setInputCheckbox(selMenu); 
 	}) 
-})
+	function ticker(height){
+		$('.real-search-item').eq(0)
+		.animate({'margin-top':height},500,
+			//animate에서 설정한 애니메이션을 다 실행한 후 실행되는 함수
+			function(){
+				/*
+				$(붙일 곳).append(붙일 애)
+				$(붙일 애)appendTo(붙일 곳)
+				*/
+			$('.real-search-item').eq(0).detach()
+			.appendTo('.real-search-list').removeAttr('style');
+		});
+	}
