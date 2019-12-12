@@ -171,9 +171,6 @@
     background-color: white;
     position: absolute;
 }
-.search-icon-click-close{
-   
-}
 /*  banner 관련 css   */
 .banner{
     height: 697px;
@@ -369,7 +366,7 @@
     height: 45px;
     background-color: white;
 }
-.w-text-box-container>input{
+input{
     border: none;
     outline: none;
     width: 180px;
