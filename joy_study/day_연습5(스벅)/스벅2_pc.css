@@ -1,0 +1,42 @@
+html{ font-size: 20px;}
+body{ font-size: 1rem;}
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+
+header{ background-color: #f6f5f0; border-top: 2px solid black; border-bottom: 1px solid #e5e7e6;
+position: fixed; width: 80rem; z-index:500;}
+header > div { position: relative; width: 54.5rem; margin: 0 auto;}
+header > div::after { content: ""; display: block; clear: both;}
+header > div h1 { float: left; padding: 1.7rem 0 1.2rem;} /* 상 좌우 하*/
+header > div h1 > a > img { width: 3.8rem; height: 3.8rem; }
+header > div nav { float: right; padding: 3.4rem 0 0 0;}
+header > div nav > ul >li { float: left; list-style: none;}
+header > div nav > ul >li > a { display: block; padding: .75rem 1.25rem 0; height: 2.6rem; 
+    font-size: 0.7rem; color: #333; text-decoration: none; padding: 1rem;  line-height: 100%;}
+header > div .spot { position: absolute; right: 2.25rem; top: 0.5rem;}
+header > div .spot > li { float: left; list-style: none ;  position: relative;}
+header > div .spot > li > a { padding: 0 .75rem; font-size: 0.6rem; text-decoration: none; color: #333; line-height: 100%;}
+header > div .spot > li  ~ li a::after { content: "" ; position: absolute; left: 0; top: 50%; width: 1px; height: 0.6rem; background-color: #e5e5e5;
+transform: translateY(-25%);}
+header > div .spot > li:last-child a:after { display: none;}
+header > div .spot > li:last-child a { display: block; width: 1.6rem; height: 1.6rem; text-align: center; font-size: 0 ; color: transparent;
+line-height: 1.6rem; background-color: white; border: 1px solid #ccc; border-radius: 4px; padding: 0;}
+header > div .spot > li:last-child a:before { content: "\e97a"; font-family: 'xeicon'; font-size: 1rem; color: black;}
+header > div .spot i { display: none;}
+header .total { display: none; text-decoration: none; color: #55443a; }
+/* contents 관련 css */
+.contents > .container { width: 54.5rem; margin: 0 auto; }
+.contents > .container > .top-contents { width: 82rem ; height: 32rem; background-color: #cd002b; 
+    margin-left: -15rem; position: absolute; margin-top: 7.41rem;}
+.contents > .container > .top-contents > div > img {
+    margin-left: 5rem; margin-top: 2.5rem;
+}
+.contents > .container > .top-contents > .top-container-box { width: 7rem; height: 2rem; border: 2px solid white; 
+    background-color: none; display: block; margin-left: 14rem; margin-top: 2rem; 
+    border-radius: .25rem; }
+.contents > .container > .top-contents > div > a { color:  white; font-size: 1rem;
+    text-decoration: none; line-height: 1.5rem; padding-left: .7rem;}
+.cup-img-box{ width: 100% ; display: flex; margin: 10rem; 
+margin-top: -18rem; margin-left: 30rem; cursor: pointer;}
+
+/* 고정 css 관련 */ 
+.hide{ display: none; }

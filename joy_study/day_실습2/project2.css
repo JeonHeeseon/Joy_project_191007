@@ -113,6 +113,8 @@
     margin-top: -2px;
     width: 100%;
     height: 100%;
+    display: flex;
+    margin: 0 auto;
    
 }
 .bg-img-container{
@@ -134,7 +136,8 @@
     width: 1000px;
     height: 125px;
     margin: 0 auto;
-    margin-top: -20%;
+    
+   
 }
 .contents-info-container>div{
     flex: 4;
@@ -143,8 +146,7 @@
 .blue-container{
     background-color: #32acdb;
     display: flex;
-    padding-left:10px;
-    padding-right: 10px;
+
 }
 .green-container{
     background-color:#4bc2b7;
@@ -221,7 +223,6 @@
     height: 125px;
     margin: 0 auto;
     background-color:  rgba(246, 246, 246, 0.9);
-    margin-left: 460px;
     position: relative;
 }
 .text-container{
@@ -299,8 +300,16 @@
     color: #a4a4a4;
     margin-left: -100px;
 }
+.text-container2{
+    width: 520px;
+    box-sizing: border-box;
+}
 .contents-img-container{
     display: flex;
+}
+.contents-img{
+    display: block;
+    margin: 20px;
 }
 
 /* 고정 */
