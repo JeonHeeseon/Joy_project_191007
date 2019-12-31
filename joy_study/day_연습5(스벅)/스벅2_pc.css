@@ -45,5 +45,15 @@ header .total { display: none; text-decoration: none; color: #55443a; }
     position: absolute; top: 39.42rem; left: -12.35rem; }
 .black-container > .black-container-p > p { color: yellowgreen;}
 .black-container > div { float: right; }
+
+.black-container-li2 { padding:0 5px; height: 1rem; overflow:hidden; font-family:Gulim; font-size:.7rem;
+    margin-top: 1rem; width: 13rem; white-space: nowrap; margin-left: -80px;}
+.tblack-container-ul > a { text-decoration: none; color: white; }
+.black-container-li2 ul,
+.black-item { margin:0; padding:0; list-style:none; }
+.black-item a { display:block; height:20px; line-height:20px; color:white; text-decoration:none;}
+.black-item a:hover { text-decoration: underline; }
+
+
 /* 고정 css 관련 */ 
 .hide{ display: none; }

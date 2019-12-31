@@ -1,0 +1,40 @@
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+
+header{ background-color: white; border-top: 2px solid black; border-bottom: 1px solid #e5e7e6;
+position: fixed; width: 1750px; height: 120px; z-index: 101;}
+header > div { position: relative; width: 100%x; margin: 0 auto; }
+header > div::after { content: ""; display: block; clear: both;}
+header > div h1 { width: 140px; padding: 30px 30px 25px; display: block;  margin: 0 auto;  
+    } /* 상 좌우 하*/
+header > div h4 { margin: 0 auto; display: block; margin-top: -65px; margin-left: 30px;
+    font-family: sans-serif;}
+header > div h4 a { text-decoration: none; color: gray; } 
+header > div .search-box { width: 300px; height: 45px;
+    display: flex; margin-top: -35px;  border: none;  
+    border: 2px solid #fff41e; border-radius: 50px; position: absolute; 
+    right: 200px; }
+header > div h5 { width: 350px; height: 45px; margin-top: 5px; margin-left: 10px;}
+header > div h5 input { width: 200px; border: none; display: block; margin-top: 8px; margin-left: 10px;
+    font-size: 12px; outline: none; }
+header > div i { font-size: 20px; margin-top: 10px; margin-right: 20px; cursor: pointer; }
+
+.container{ position: relative; width: 100%x; margin: 0 auto; }
+.container .main-text { font-size: 200px; font-family:'Times New Roman', Times, serif; 
+    color: #dddddd; cursor: default; }
+.container .main-text .korea-text { padding-top: 150px; margin-left: 150px; }
+.container .main-text .art-text { padding-top: 150px; margin-left: 1200px; }
+.container .main-bar { border: 1px solid black; width: 900px; margin: 0 auto;
+    margin-top: -300px;}
+.container .main-img{ display: flex;margin-top: -300px;}
+.container .main-img .korea-img img,
+.container .main-img .Oriental-img img,
+.container .main-img .Western-img img
+{ box-shadow:5px 5px 5px  gray;}
+.container .main-img .korea-img { margin-top: -585px; margin-left: 470px;}
+
+.woo-a-model { width: 150px; height: 550px; margin: 0 auto;
+    position: fixed; margin-top: -509px; margin-left: 700px;} 
+footer{ width: 100%; height: 30px; background-color: #03004c; margin-bottom: 0;
+    color:  white ; font-size: 10px; padding-top: 5px; padding-left: 15px;}
+/* hide/ css */
+.hide{ display: none; }
