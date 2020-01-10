@@ -12,6 +12,13 @@ header > div nav { float: right; padding: 3.4rem 0 0 0;}
 header > div nav > ul >li { float: left; list-style: none;}
 header > div nav > ul >li > a { display: block; padding: .75rem 1.25rem 0; height: 2.6rem; 
     font-size: 0.7rem; color: #333; text-decoration: none; padding: 1rem;  line-height: 100%;}
+header > div nav > ul > li > .sb-sub-bg { width:  72.5rem; height:  20rem; background-color: black; 
+    margin-right: -500rem; }
+header > div > nav > ul > li > .sub-coffee { color: white; text-decoration: none;
+    }
+header > div > nav > ul > li > .sub-coffee > li { text-decoration: none; list-style: none;
+    color: white;}
+
 header > div .spot { position: absolute; right: 2.25rem; top: 0.5rem;}
 header > div .spot > li { float: left; list-style: none ;  position: relative;}
 header > div .spot > li :hover { text-decoration: underline; }
